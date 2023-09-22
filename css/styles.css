@@ -1,0 +1,84 @@
+html{
+  scroll-behavior: smooth;
+}
+
+#navbar{
+  position: fixed;
+  left: 3vw;
+  top: 1vw;
+  z-index: 100;
+}
+
+#sections{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 100vh;
+}
+
+#about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 100vh;
+  margin: 5vw
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 33.33vw 33.33vw 33.34vw;
+}
+
+#contact {
+  background-color: rgba(29, 106, 154, 0.72);
+  color: white;
+  margin: 0;
+}
+
+.proj-btn {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.proj-img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.img-cover {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 106, 154, 0.72);
+  opacity: 0;
+  z-index: 10;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img-description {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  margin: 1vw;
+}
+
+.proj-btn:hover .img-cover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.section-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
