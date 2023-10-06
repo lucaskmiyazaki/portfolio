@@ -2,6 +2,7 @@ import * as THREE from "https://cdn.skypack.dev/three@0.133.1";
 import openSimplexNoise from 'https://cdn.skypack.dev/open-simplex-noise';
 
 let scrollPercent = 0;
+let isIntersecting = false;
 
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera( 75, innerWidth / innerHeight, 0.1, 1000 );
@@ -10,6 +11,8 @@ let renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize( innerWidth, innerHeight );
 document.body.appendChild( renderer.domElement );
 scene.background = new THREE.Color( 0xffffff );
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
 
 let radius = 2;
 let geometry = new THREE.IcosahedronGeometry(1, 1);
@@ -37,6 +40,16 @@ window.addEventListener('mousemove', (event) =>
 {
     cursor.x = event.clientX / document.body.offsetWidth
     cursor.y = event.clientY / document.body.offsetHeight
+
+    pointer.x =  ( event.clientX / window.innerWidth ) * 2 - 1;
+    pointer.y =  - ( event.clientY / window.innerHeight ) * 2 + 1;
+})
+
+window.addEventListener('click', (event) =>
+{
+    if (isIntersecting) {
+      window.location.assign('#projects');
+    }
 })
 
 window.addEventListener("resize", () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight)});
@@ -51,8 +64,6 @@ renderer.setAnimationLoop( () => {
   geometry.computeVertexNormals();
   pos.needsUpdate = true;
 
-  //object.rotation.x += 0.005;
-	//object.rotation.y += 0.005;
   object.rotation.z = - 5 *cursor.x;
   object.rotation.x = 10*cursor.y;
 
@@ -68,6 +79,22 @@ renderer.setAnimationLoop( () => {
     camera.position.y = offsetY
   } else{
     camera.position.y = - 0.5 * (scrollPercent - canvasPercent) + offsetY 
+  }
+
+  let bagtip = document.getElementById('bag-tip');
+  if (bagtip){
+    bagtip.style.top = `${(-pointer.y+1)*50}vh`;
+    bagtip.style.left = `${(pointer.x+1)*100 - 5}vh`;
+  } 
+  
+  raycaster.setFromCamera(pointer, camera);
+  let intersects = raycaster.intersectObjects( scene.children );
+  if (intersects.length > 0) {
+    isIntersecting = true;
+    bagtip.style.visibility = 'visible';
+  } else{
+    isIntersecting = false;
+    bagtip.style.visibility = 'hidden';
   }
 
 	renderer.render(scene, camera);

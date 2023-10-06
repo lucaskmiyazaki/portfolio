@@ -9,9 +9,13 @@ removeActiveClass = () => {
 
 addActiveClass = (entries, observer) => {
     entries.forEach(entry => {
+        let currentSection;
         if(entry.isIntersecting){
             removeActiveClass();
-            let currentSection = document.querySelector(`#btn-${entry.target.id}`)
+            currentSection = document.querySelector(`#btn-${entry.target.id}`)
+        }
+
+        if (currentSection){
             let currentClass = currentSection.className + " active";
             currentSection.className = currentClass;
         }
