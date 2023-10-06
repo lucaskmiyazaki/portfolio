@@ -1,5 +1,56 @@
+:root {
+  --primary: rgba(29, 106, 154, 0.72);
+  --secondary: #222222;
+  --footer: #222222;
+  --header: #222222;
+}
+
 html{
   scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: bungee;
+  src: url("/fonts/BungeeHairline-Regular.ttf");
+} 
+
+@font-face {
+  font-family: bungee-bold;
+  src: url("/fonts/Bungee-Regular.ttf");
+} 
+
+@font-face {
+  font-family: courier;
+  src: url("/fonts/CourierPrime-Regular.ttf");
+} 
+
+h1{
+  font-size: 10vw;
+  font-weight: 900;
+  font-family: bungee;
+}
+
+h2 {
+  font-size: 50px;
+  font-family: bungee-bold;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: bungee;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 900;
+  font-family: bungee;
+}
+
+p {
+  font-weight: 100;
+  font-family: courier;
 }
 
 canvas {
@@ -11,6 +62,43 @@ canvas {
   height  : 100%;
   margin  : 0;
   padding : 0;
+}
+
+.nav-link, .nav-link:hover {
+  font-family: bungee;
+  font-weight: 950;
+  font-size: 30px;
+  color: black;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: white;
+  background-color:var(--header);
+}
+
+.logo {
+  position: absolute;
+  top: 30vh;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+@keyframes updown {
+  from {bottom: 80px;}
+  to {bottom: 40px;}
+}
+
+.home-icon {
+  height: 40px;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 #navbar{
@@ -26,16 +114,26 @@ canvas {
 }
 
 #home {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-auto-rows: 100vh;
+  height: 100vh;
 }
 
 #about {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-auto-rows: 100vh;
   margin: 5vw
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.skills-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1vw;
 }
 
 #projects {
@@ -44,9 +142,69 @@ canvas {
 }
 
 #contact {
-  background-color: rgba(29, 106, 154, 0.72);
+  position: relative;
+  background-color: var(--footer);
   color: white;
   margin: 0;
+  padding: 3vw;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.contact-icon {
+  height: 20px;
+}
+
+.contact-link {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: bungee;
+  color: white;
+}
+
+.contact-link:hover {
+  color: cyan;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  font-family: courier;
+  font-size: 16px;
+  width: 120px;
+  background-color: white;
+  color: var(--secondary);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+}
+
+.tool:hover .tooltiptext {
+  visibility: visible;
+}
+
+.download-cv{
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
+  font-family: bungee;
+  font-weight: 950;
+  font-size: 30px;
+  color: white;
+}
+
+.download-cv:hover {
+  color: cyan;
 }
 
 .proj-btn {
@@ -60,14 +218,14 @@ canvas {
   object-fit: cover;
   width: 100%;
   max-height: 100%;
-  background-color: rgba(29, 106, 154, 0.72);
+  background-color: var(--primary);
   opacity: 1;
 }
 .blank-proj2 {
   object-fit: cover;
   width: 100%;
   max-height: 100%;
-  background-color: rgba(29, 154, 29, 0.72);
+  background-color: var(--primary);
   opacity: 1;
 }
 
@@ -83,9 +241,15 @@ canvas {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  background: rgba(29, 106, 154, 0.72);
+  background: var(--primary);
   opacity: 0;
   z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1vw;
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
@@ -93,9 +257,6 @@ canvas {
 
 .img-description {
   color: #fff;
-  position: absolute;
-  bottom: 0;
-  margin: 1vw;
 }
 
 .proj-btn:hover .img-cover {
@@ -103,8 +264,6 @@ canvas {
   opacity: 1;
 }
 
-.section-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.img-modal {
+  max-width: 100%;
 }

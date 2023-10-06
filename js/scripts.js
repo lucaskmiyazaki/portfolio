@@ -28,3 +28,9 @@ const sections = document.querySelectorAll("section");
 sections.forEach(section => {
     observer.observe(section);
 });
+
+copyEmail = () => {
+    // Copy the text inside the text field
+    navigator.clipboard.writeText("lucaskmiyazaki@hotmail.com");
+    alert("email address copied to clipboard");
+}

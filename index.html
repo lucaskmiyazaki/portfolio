@@ -8,9 +8,11 @@
         <meta name="author" content="Lucas Miyazaki" />
         <title>Lucas's Web Portfolio</title>
         <base href=".">
-        <link rel="icon" type="image/png" href="img/cubo.png" />
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/png" href="img/icon/cubo.png" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/timeline.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
@@ -19,7 +21,7 @@
         <div id="navbar">
             <ul class="nav nav-pills">
                 <li class="nav-item" id="btn-about">
-                    <a class="nav-link" href="#about">about</a>
+                    <a class="nav-link bg-secondary" href="#about">about</a>
                 </li>
                 <li class="nav-item" id="btn-projects">
                     <a class="nav-link" href="#projects">project</a>
@@ -32,99 +34,628 @@
 
         <div id="sections">
             <section id="home">
-                <h1 class="section-text">Lucas Miyazaki</h1>
-
+                <div class="logo">
+                    <h1 class="section-text">MIYA</h1>
+                    <h1 class="section-text">ZAKI</h1>
+                </div>
+                <img src="img/icon/triangle.png" class="home-icon">
             </section>
             <section id="about">
                 <div></div>
-                <p class="section-text">
-                    linha do tempo (com projetos e links)
-                    faltou proj hackaton e sociais
-                    skills
+                <div class="about-text">
+                    <h5>Computational Geometry Expert · Mechatronics Engineer · 
+                        Designer · Web Developer
+                    </h5>
+                    <p>
+                        I am fascinated to how geometry can recreate our world in the virtual environment and to how humans interact with this boundless reconstructed land. When we seamlessly interface the virtual to our physical reality, we unlock the ability to transform our wildest dreams into tangible experiences. For instance, we can model an organoid in the computer and 3D print it; we can look at cells in virtual reality and feel like we have shrunk; and we can X-ray CT a car motor to see the inside without even slicing it.
+                    </p>
+                    <div></div>
+                    <h5>
+                        career
+                    </h5>
+                    <div class="honeycomb">
+                        <div class="hex hex1">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">2016</h5>
+                        </div>
+                        
+                        <div class="line line1"></div>
+            
+                        <div class="hex hex2">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">2019</h5>
+                        </div>
+            
+                        <div class="line line2"></div>
+            
+                        <div class="hex hex3">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">2020</h5>
+                        </div>
+            
+                        <div class="line line3"></div>
+            
+                        <div class="hex hex4">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">2021</h5>
+                        </div>
+            
+                        <div class="line line4"></div>
+            
+                        <div class="hex hex5">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">2022</h5>
+                        </div>
+            
+                        <div class="line line5"></div>
+            
+                        <div class="hex hex6">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">2023</h5>
+                        </div>
+            
+                        <div class="line bottom-line1"></div>
+            
+                        <div class="hex bottom-hex1 selectable-hex" href="#poliModal" data-toggle="modal">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">USP</h5>
+                        </div>
+            
+                        <div class="line bottom-line2"></div>
+                        <div class="line bottom-line3"></div>
+            
+                        <div class="hex upper-hex1 selectable-hex" href="#teethModal" data-toggle="modal">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-big-label">UTokyo</h5>
+                        </div>
+                        
+                        <div class="line upper-line1"></div>
+            
+                        <div class="hex upper-hex2 selectable-hex" href="#covidModal" data-toggle="modal">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">V360</h5>
+                        </div>
+                        <div class="line upper-line2"></div>
+            
+                        <div class="hex upper-hex3 selectable-hex" href="#tissuelabsModal" data-toggle="modal">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-big-label">Tissue</h5>
+                        </div>
+                        <div class="line upper-line3"></div>
+                        <div class="line upper-line4"></div>
+                        <div class="line upper-line5"></div>
+            
+                        <div class="hex upper-hex4 selectable-hex" href="#galyModal" data-toggle="modal">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h5 class="hex-label">GALY</h5>
+                        </div>
+                        <div class="line upper-line6"></div>
+                        <div class="line upper-line7"></div>
+                    </div>
 
+                    <div></div>
+                    <h5>
+                        skills
+                    </h5>
+                    <div class="skills-table">
+                        <div>
+                            <h5>Computational geometry</h5>
+                            <p>
+                                ability to apply geometry/linear algebra in real projects
+                                develop machine learning models
+                                Photogrametry, interferometry, depth camera
+                                Segmentation, 
+                                ICP
+                                Mesh Reconstruction
+                                Slic3r
+                                CAD/CAM (threejs, c++)
+                                computer vision AI (YOLO, OCR)
+                                VR udemy, threejs, 360 cameras
+                            </p>
+                        </div>
+                        <div>
+                            <h5>programming languages</h5>
+                            <p>
+                                python, JS, C, C++, C#, Ruby
+                                html, SQL, CSS
+                                React, Bootstrap, Node
+                                Rails, Flask
+                                OpenCV, OpenGL
+                                Pandas, Keras, Tensorflow, Matplotlib
+                            </p>
+                        </div>
+                        <div>
+                            <h5>mechanical design and production</h5>
+                            <p>
+                                fusion360
+                                deep knowledge on CAD/CAM software such as Fusion360, openscad. ability to develop my own
+                                ability to use and develop 3D printing techniques FDM, extrusion, SLA
+                                ability to molding and casting, laser cut, CNC machine
+                            </p>
+                        </div>
+                        <div>
+                            <h5>electronics & control</h5>
+                            <p>
+                                Prototyping platforms (arduino, RaspPi)
+                                PCB design
+                                matlab
+                                PID
+                                interface with electromechanical
 
-                    Mechatronics engineer, web developer, and design enthusiast Lucas Kyoshi Miyazaki graduated at the University of Sao Paulo and worked for two biotech companies. His main research field is computational geometry.
-                    Why Computational Geometry?
-                    In the virtual world, geometry becomes a powerful tool, an instrument that allows us to craft and shape worlds limited only by our imagination. In this digital dimension, everything is possible, and the boundaries of creativity are boundless. When we seamlessly interface the virtual world with our physical reality, we unlock the ability to transform our wildest dreams into tangible experiences. This fusion opens doors to innovation, creativity, and solutions that were once considered unattainable. I am driven by the belief that by harnessing the power of computational geometry, we can reshape our reality and make the seemingly impossible, possible.
-                    For instance, people were facing problems to analyse entangled cotton fibers. I created a method to scan the fibers and a VR app to visualize it. It made shrinking the scientists to the cell level possible.
-                    In the virtual world is also possible to create organs and blood vessels. These organs can be 3D printed.
-                </p>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
             </section>
             <section id="projects">
-                <btn class="proj-btn" href="#exampleModal" data-toggle="modal">
+                <div class="proj-btn" href="#chipModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/chip.gif"> 
                     <div class="img-cover">
-                        <p class="img-description">this image</p>
-                    </div>
-                </btn>
-                <div class="blank-proj1"></div>
-                <div class="proj-btn">
-                    <img class="proj-img" src="img/thumb/software.gif"> 
-                    <div class="img-cover">
-                        <p class="img-description">this image</p>
+                        <h2 class="img-description">organ-on-a-chip</h2>
                     </div>
                 </div>
                 <div class="blank-proj1"></div>
-                <div class="proj-btn">
+                <div class="proj-btn" href="#cadModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/soft.gif"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">web cad/cam</h2>
+                    </div>
+                </div>
+                <div class="blank-proj1"></div>
+                <div class="proj-btn" href="#bioreactorModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/bioreactor.gif"> 
                     <div class="img-cover">
-                        <p class="img-description">this image</p>
+                        <h2 class="img-description">bioreactors</h2>
                     </div>
                 </div>
                 <div class="blank-proj1"></div>
-                <div class="proj-btn">
+                <div class="proj-btn" href="#bioprintModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/mould.gif"> 
                     <div class="img-cover">
-                        <p class="img-description">this image</p>
+                        <h2 class="img-description">bioprinters</h2>
                     </div>
                 </div>
                 <div class="blank-proj1"></div>
                 <div class="blank-proj1"></div>
-                <div class="blank-proj2"></div>
-                <div class="proj-btn">
-                    <img class="proj-img" src="img/thumb/vr.gif"> 
+                <div class="blank-proj1"></div>
+
+                <div class="proj-btn" href="#vrModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/chapada.JPG"> 
                     <div class="img-cover">
-                        <p class="img-description">this image</p>
+                        <h2 class="img-description">VR video</h2>
                     </div>
                 </div>
-                <div class="proj-btn">
+                <div class="proj-btn" href="#fiberModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/fibers.png"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">cell analysis</h2>
+                    </div>
+                </div>
+                
+                
+                <div class="proj-btn" href="#loggerModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/sensores.jpg"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">data logger</h2>
+                    </div>
+                </div>
+
+                <div class="blank-proj1"></div>
+                <div class="blank-proj1"></div>
+                <div class="blank-proj1"></div>
+
+                <div class="proj-btn" href="#platformModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/plataform.gif"> 
                     <div class="img-cover">
-                        <p class="img-description">this image</p>
+                        <h2 class="img-description">automation</h2>
+                        <h2 class="img-description">platform</h2>
                     </div>
                 </div>
-                
-                
-                <div class="proj-btn">
+                <div class="blank-proj1"></div>
+                <div class="proj-btn" href="#tccModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/tcc1.gif"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">AI</h2>
+                        <h2 class="img-description">cashier</h2>
+                    </div>
+                </div>
+                <div class="blank-proj1"></div>
+                <div class="proj-btn" href="#teethModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/teeth.gif"> 
                     <div class="img-cover">
-                        <p class="img-description">this image</p>
+                        <h2 class="img-description">teeth scan</h2>
+                        <h2 class="img-description">and Segmentation</h2>
                     </div>
                 </div>
-                <div class="proj-btn">
-                    <img class="proj-img" src="img/thumb/pi7.gif"> 
-                    <div class="img-cover">
-                        <p class="img-description">this image</p>
-                    </div>
-                </div>
-                <div class="blank-proj2"></div>
 
+                <div class="blank-proj1"></div>
+                <div class="proj-btn" href="#mugModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/caneca.gif"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">mug</h2>
+                    </div>
+                </div>
+                <div class="proj-btn" href="#covidModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/hackaton.png"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">covid map</h2>
+                    </div>
+                </div>
+
+                <div class="proj-btn" href="#poliModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/poli.gif"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">Mechatronics</h2>
+                    </div>
+                </div>
+                <div class="proj-btn" href="#socialModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/enactus.gif"> 
+                    <div class="img-cover">
+                        <h2 class="img-description">social projects</h2>
+                        <h2 class="img-description">& volunteering</h2>
+                    </div>
+                </div>
+                <div class="blank-proj1"></div>
+                
             </section>
             <section id="contact">
-                <h4>contact</h4>
-                <p>...</p>
+                <h3>GET IN TOUCH</h3>
+                <div>
+                    <div class="contact-item"><img src="img/icon/linkedin.png" class="contact-icon"><a class="contact-link" href="https://www.linkedin.com/in/lucas-miyazaki-74a587150/">LINKEDIN</a></div>
+                    <div class="contact-item"><img src="img/icon/github.png" class="contact-icon"><a   class="contact-link" href="https://github.com/lucaskmiyazaki">GITHUB</a></div>
+                    <div class="contact-item"><img src="img/icon/email.png" class="contact-icon">
+                        <a    class="contact-link tool" onclick="copyEmail()">
+                            EMAIL 
+                            <span class="tooltiptext">copy to clipboard</span>
+                        </a>
+                    </div>
+                </div>
+                <a class="download-cv" href="data/resume.pdf"><i class="fa fa-download"></i> resume</a>
             </section>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="tissuelabsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <h5 class="modal-title fs-5" id="exampleModalLabel">Tissuelabs</h5>
                     </div>
                     <div class="modal-body">
-                      ...
+                      <p>
+                        ksdmfmdsfmdsk
+                      </p>
+                      <img class="img-modal" src="img/tissue_logo.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="galyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5" id="exampleModalLabel">Galy</h5>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        ksdmfmdsfmdsk
+                      </p>
+                      <img class="img-modal" src="img/galy_logo.jpeg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="chipModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">organ-on-a-chip</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        Tissuelabs is a tissue engineering startup. The companies' dream was to be able to artificially produce the first 
+                        transplantable heart. The main product of the company are 3D bioprinters. Lucas had a key role in the small team of engineers. 
+
+                        falar que voce teve a iniciativa
+
+                        Lucas was responsible for designing and testing most of the organ-on-a-chip and microfluidics 3D models at Tissuelabs.
+                        Lucas developed more than 50 different models. The models were used by scientists to conduct experiments simulating human organs.
+                        They were also used to showcase the equipment capabilities. 
+
+                        falar em capacidade de produzir precision engineering
+
+                        https://www.youtube.com/watch?v=-xNT_aEYsuQ
+                      </p>
+                      <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                          <img class="img-modal" src="img/015-chip.gif">
+                          <img class="img-modal" src="img/016-chip.gif">
+                          <img class="img-modal" src="img/026-chip.gif">
+                          <img class="img-modal" src="img/027-chip.jpeg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="cadModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Web cad/cam</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        dcdscsdcdsfasdfasdf
+                        integration with extrusion 3D printer
+                        integration with slic3r
+                        import 3D models, and export gcode
+                        customizable prints, feito para scientists
+                        pipette mode
+                        control and calibrate printer
+                        cad drawing to 3D
+                      </p>
+                          <img class="img-modal" src="img/022-pipette.gif">
+                          <img class="img-modal" src="img/028-software.gif">
+                          <img class="img-modal" src="img/029-software.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="bioreactorModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">bioreactors</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        lowcost bioreactors. maintenance lab equipment
+                        prize congeniality and achiever
+                      </p>
+                          <img class="img-modal" src="img/021-bioreactor.gif">
+                          <img class="img-modal" src="img/018-premio.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="bioprintModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">bioprinters</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        propose new ways of using such as pipette mode
+                        propose new printing techniques
+                        propose improvements
+                        design components
+                      </p>
+                          <img class="img-modal" src="img/017-tissueray.gif">
+                          <img class="img-modal" src="img/022-pipette.gif">
+                          <img class="img-modal" src="img/019-mould.gif">
+                          <img class="img-modal" src="img/024-bioprint.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="vrModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">VR video</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        https://www.forbes.com/sites/jeffkart/2023/07/08/lab-grown-cotton-enters-the-market-with-galy-suzuran-partnership/?sh=63d9c7b81c9f
+
+                      </p>
+                          <img class="img-modal" src="img/043-chapada.jpg">
+                          <img class="img-modal" src="img/041-chapada.JPG">
+                          <img class="img-modal" src="img/039-chapada.JPG">
+                          <img class="img-modal" src="img/046-chapada.JPG">
+                          <img class="img-modal" src="img/038-chapada.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="fiberModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+
+                      </p>
+                          <img class="img-modal" src="img/047-vr.JPG">
+                          <img class="img-modal" src="img/054-fiber.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="loggerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+
+                      </p>
+                          <img class="img-modal" src="img/031-sensores.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="platformModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+
+                      </p>
+                          <img class="img-modal" src="img/033-plataforma.gif">
+                          <img class="img-modal" src="img/034-plataforma.gif">
+                          <img class="img-modal" src="img/035-plataforma.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="tccModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        https://ieeexplore.ieee.org/document/9529909
+                      </p>
+                          <img class="img-modal" src="img/011-tcc.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="teethModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        horus
+                        kinect
+                        interferometry
+                        ICP
+                        mesh Reconstruction (marching cubes, poison)
+                        Segmentation region growing
+
+                        FAPESP
+                        UTokyo
+                        ICGG
+                        https://www.researchgate.net/publication/347289425_Teeth_Mesh_Segmentation_Through_Curvature_Analysis
+                        https://bv.fapesp.br/pt/pesquisador/698297/lucas-kyoshi-miyazaki/
+
+                      </p>
+                          <img class="img-modal" src="img/005-teeth.png">
+                          <img class="img-modal" src="img/006-teeth.png">
+                          <img class="img-modal" src="img/007-teeth.png">
+                          <img class="img-modal" src="img/002-teeth.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="mugModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        
+
+                      </p>
+                          <img class="img-modal" src="img/014-canecaa.JPG">
+                          <img class="img-modal" src="img/012-caneca.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="covidModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        https://github.com/lucaskmiyazaki/corona_mall/blob/master/website.ipynb
+
+                      </p>
+                          <img class="img-modal" src="img/hackaton.jpeg">
+                          <img class="img-modal" src="img/hackathon2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="poliModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        falar dos projetos
+                        falar das optativas
+                      </p>
+                          <img class="img-modal" src="img/008-pi7.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="socialModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <p>
+                        enactus maduros co founder
+                        ipoli
+                        poli cidada
+                        aiesec
+                        acantonavolley
+                      </p>
+                          <img class="img-modal" src="img/maduros.gif">
+                          <img class="img-modal" src="img/aiesec.JPG">
                     </div>
                 </div>
             </div>
@@ -132,7 +663,7 @@
 
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-		<script type="module" src="./noiseframe.js"></script>
+		<script type="module" src="js/noiseframe.js"></script>
     </body>
 
 </html>
