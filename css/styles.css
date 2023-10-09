@@ -16,7 +16,7 @@ h1{
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 3vw;
   font-family: 'Bungee';
   margin: 0px;
 }
@@ -38,6 +38,11 @@ p {
   font-family: 'Courier Prime';
 }
 
+ul {
+  font-weight: 100;
+  font-family: 'Courier Prime';
+}
+
 canvas {
   z-index : -9999;
   position: fixed;
@@ -52,6 +57,7 @@ canvas {
 #bag-tip {
   position: fixed;
   top: 10px;
+  visibility: hidden;
 }
 
 .nav-link, .nav-link:hover {
@@ -110,7 +116,6 @@ canvas {
 #about {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-auto-rows: 100vh;
   margin: 5vw
 }
 
@@ -124,6 +129,14 @@ canvas {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1vw;
+}
+
+.skill-text {
+  display: none;
+}
+
+.skill-arrow {
+  cursor: pointer;
 }
 
 #projects {
@@ -254,6 +267,22 @@ canvas {
   opacity: 1;
 }
 
+.modal-header{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.close {
+  position: absolute;
+  right: 1vw;
+}
+
 .img-modal {
   max-width: 100%;
+}
+
+.modal-grid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1vw;
 }

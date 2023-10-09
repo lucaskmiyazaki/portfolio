@@ -12,12 +12,13 @@
     --hex-increment: calc(var(--hex-width) + var(--h-length) - var(--hex-border-radius)/2);
     --diagonal1-x-offset: calc(var(--line-x-offset) - var(--hex-tip-height) - var(--hex-border-radius));
     --diagonal2-x-offset: calc(var(--h-length) + var(--line-x-offset) - var(--hex-tip-height)/2 - var(--hex-border-radius)/2);
+    --label-font-size: calc(var(--hex-height) / 4.5);
 }
 
 .honeycomb{
     position: relative;
     width: var(--timeline-width);
-    height: calc(4*var(--hex-height));
+    height: calc(4.2*var(--hex-height));
 }
 
 .hex{
@@ -28,14 +29,23 @@
     transform-origin: center center;
 }
 
+h6 {
+    font-size: var(--label-font-size);
+    font-family: 'Bungee';
+}
+
 .hex-label{
     position: absolute;
-    top: calc(var(--hex-height) / 2 - 20px);
+    top: calc(var(--hex-height) / 2 - var(--label-font-size));
+}
+
+.selectable-hex-label {
+    color: white;
 }
 
 .hex-big-label{
     position: absolute;
-    top: calc(var(--hex-height) / 2 - 20px);
+    top: calc(var(--hex-height) / 2 - var(--label-font-size));
     left: calc(var(--hex-border-radius) - var(--hex-tip-height));
 }
 
@@ -51,6 +61,10 @@
     height: var(--hex-height);
     transform-origin: center center;
     pointer-events: auto;
+}
+
+.selectable-sqr {
+    background-color: var(--line-color);
 }
 
 @keyframes spin {

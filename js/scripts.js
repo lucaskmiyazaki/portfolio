@@ -1,4 +1,6 @@
+// --------------------------Navbar ----------------------
 const navbarSections = document.querySelectorAll(".nav-item")
+window.location.href = "#home"
 
 removeActiveClass = () => {
     navbarSections.forEach(section => {
@@ -33,8 +35,23 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
+// --------------------------Contact ----------------------
 copyEmail = () => {
     // Copy the text inside the text field
     navigator.clipboard.writeText("lucaskmiyazaki@hotmail.com");
     alert("email address copied to clipboard");
+}
+
+// --------------------------About ----------------------
+showMore = (id) => {
+    var moreText = document.getElementById("skill-" + id);
+    var arrow = document.getElementById("arrow-" + id);
+
+    if (moreText.style.display === "none"){
+        moreText.style.display = "inline";
+        arrow.innerHTML = "&#65087;"
+    } else {
+        moreText.style.display = "none";
+        arrow.innerHTML = "&#65088;"
+    }
 }
