@@ -53,12 +53,17 @@
                         Designer · Web Developer
                     </h5>
                     <p>
-                        I am fascinated to how geometry can recreate our world in the virtual environment and to how humans interact with this 
-                        boundless reconstructed space. When we seamlessly interface the virtual to our physical reality, 
-                        we unlock the ability to transform our wildest dreams into tangible experiences. 
+                        What moves me is to design technologies that augment human capabilities and defy the boundaries of what seems impossible. 
+                        I graduated in mechatronics engineering from USP, interned at the University of Tokyo, 
+                        and worked on biotech companies as Galy and Tissuelabs, developing disruptive technologies.
+                    </p>
+                    <p>
+                        Besides my passion for engineering and design, I am fascinated by geometry. 
+                        Geometry is a powerful tool that enables the reconstruction of virtual models of the world. 
+                        The virtual world is boundless. With the proper devices, 
+                        we can interface it with our reality and create a perception that something magical is happening. 
                         For instance, we can model an organoid in the computer and 3D print it; 
-                        we can look at cells in virtual reality and feel like we have shrunk; 
-                        and we can see the inside of a car without opening it with X-ray CT.
+                        look at cells in virtual reality and feel like we have shrunk; and see the inside of a car without opening it with X-ray CT.
                     </p>
                     <div></div>
                     <h5>
@@ -174,14 +179,14 @@
                         <div>
                             <h5>Computational geometry</h5>
                             <p class="skill-title">
-                                Ability to virtually recreate our world with numbers and to turn numbers into tangible things:
+                                Ability to virtually recreate our world with numbers and bits and to turn bits into tangible things:
                             </p>
                             <p id="skill-geo" class="skill-text">
                                 experience with scanning methods (such as photogrametry, interferometry, and depth cameras);
                                 expertise in 2D/3D data processing (such as segmentation algorithms, mesh reconstruction, ICP, etc.);
                                 skills to develop my own CAD/CAM (using threejs or c++);
                                 familiarity with gcode and slicing (for 3D printers) and motion planning algorithms;
-                                knowledge in VR apps/videos development (unity, threejs, 360 cameras)
+                                knowledge in VR apps/videos development (unity, threejs, 360 cameras);
                                 capacity to develop machine learning models, especially for computer vision (such as object classificators and OCR);
                             </p>
                             <h5 onclick="showMore('geo')" id="arrow-geo" class="skill-arrow">&#65088;</h5>
@@ -219,7 +224,7 @@
                         <div>
                             <h5>actuators, sensors & control systems</h5>
                             <p class="skill-title">
-                                Ability to make my machine move, sense, and respond in the cheapest and most optimized way:
+                                Ability to make machines move, sense, and respond in the cheapest and most optimized way:
                             </p>
                             <p id="skill-control" class="skill-text">
                                 Capacity to design electromechanical devices, pneumatic systems and other fluidic circuits.
@@ -431,18 +436,20 @@
                     </div>
                     <div class="modal-body proj-description">
                       <p>
-                        Tissuelabs is a tissue engineering startup. The companies' dream was to manufacture an artificial transplantable heart. 
-                        Lucas proposed the first organ-on-a-chip produced by the company using stereolithography 3D printers.
-                        Organ-on-a-chip is an organ model used to simulate the activities, mechanics and physiological response of an organ. 
-                        The model is composed by a 3D microfluidic circuit integrated to a cell culture. 
-                        Each channel can represent blood vessels and other parts of the human body. For instance, a alveoli model is composed by an air sac
-                        and a network of blood vessels around the sac.
+                        Tissuelabs is a tissue engineering startup. The company's dream was to manufacture an artificial transplantable heart. 
+                        Lucas proposed the first organ-on-a-chip produced by the company using stereolithography 3D printers. 
+                        Organ-on-a-chip is an organ model that simulates activities, mechanics, and physiological response. 
+                        The model has a 3D microfluidic circuit integrated with a cell culture. 
+                        Each channel can represent blood vessels and other parts of the human body. 
+                        For instance, an alveoli model is basically an air sac and a network of blood vessels around the sac.
                      </p>
                      <p>
-                        Lucas was responsible for designing and testing most of the organ-on-a-chip and microfluidics 3D models at Tissuelabs.
-                        He developed more than 50 different models that were used by scientists to conduct experiments and were also used to showcase the equipment
-                        capabilities. Some of these models can be seen on the companies' video:
-                        <a href="https://www.youtube.com/watch?v=-xNT_aEYsuQ">video link</a>
+                        Lucas was responsible for designing and testing most organ-on-a-chip and microfluidics 3D models at Tissuelabs. 
+                        He developed more than 50 different models - 
+                        used by scientists to conduct experiments and also used by the company to showcase the equipment's capabilities. 
+                        The company's 
+                        <a href="https://www.youtube.com/watch?v=-xNT_aEYsuQ">video</a>
+                        shows some of these models.
                       </p>
                       
                       <div class="modal-grid">
@@ -469,22 +476,19 @@
                       <div class="modal-grid">
                         <div>
                             <p>
-                                The main product at Tissuelabs were 3D printers. Lucas was responsible for developing a software to interact with the printer.
-                                The software was developed using javascript and was hosted on a remote server, thus, eliminating the need to install a software 
-                                and solving compatibility problems. 
+                                The main product at Tissuelabs were 3D printers. 
+                                Lucas was responsible for developing a software to interact with the printer. 
+                                The software was developed using javascript and was hosted on a remote server, 
+                                eliminating the need to install a software and solving compatibility problems. 
                             </p>
                             <p>
-                                The software was integrated to slic3r and to the 3D printer. 
-                                The user was able to convert different format 3D models - stl, obj, ply, etc - into gcode.
-                                The web app can be used to print with multiple bio inks and even mix different concentration of inks.
-        
-                                Lucas also adapted the printer to be used as an automatic pipette machine by developing a pipette mode in the software.
-        
+                                The software has integration with slic3r and with the 3D printer. The user can convert different format 3D models - 
+                                stl, obj, ply, etc - into gcode. The web app can 3D print with multiple bio inks and even mix different concentration of inks. 
+                                Lucas also adapted the printer as an automatic pipette machine by developing a pipette mode in the software.
                               </p>
                               <p>
-                                Finally, Lucas developed CAD software to generate organ-on-a-chip 3D models based on a 2D drawing made by the user.
-                                The user had 2 tools available for drawing: The first tool was used to draw the contour of the object.
-                                The second tool was used to draw the vessels' path.
+                                Finally, Lucas developed CAD software to generate organ-on-a-chip 3D models based on a 2D drawing made by the user. 
+                                The user had two tools available: The first tool can draw the object contour. The second tool draws the vessels' path.
                               </p>
                         </div>
                         <div>
@@ -511,14 +515,17 @@
                       <div class="modal-grid">
                         <div>
                             <p>
-                                Tissuelabs also produced bioinks. A bioink is composed by an extra-cellular matrix that is extracted from animal and vegetal sources.
-                                Lucas developed 2 bioreactors used in the bioink production process. Lucas was also responsible for fixing lab equipment,
-                                for instance, bag sealers, magnetic stirrers, bioreactors, autoclave, 3D printers, and centrifuges.
+                                Tissuelabs produced bioinks - an extra-cellular matrix extracted from animal and vegetal sources. 
+                                Lucas developed two low-cost bioreactors used in the bioink production process. 
+                                Lucas was also responsible for fixing lab equipment such as bag sealers, magnetic stirrers, bioreactors, autoclave, 
+                                3D printers, and centrifuges.
                             </p>
                             <p>
-                                Lucas is very goal oriented person and was able to fix an equipment in less than 24 hours after the ticket was opened.
-                                Due to his dedication to achieve goals and help his colleagues, he won the congeniality and achiever prize during the third quarter
-                                of 2021, for being voted the best employees and for achieving more goals respectively.
+                                Lucas is very goal oriented person. Besides constantly bringing new ideas, he solves problems and achieve goals fast. 
+                                For instance, he is able to fix an equipment in less than 24 hours after a ticket is opened. 
+                                Due to his dedication to achieve goals and help his colleagues, 
+                                he won the congeniality and achiever prize during the third quarter of 2021, 
+                                for being voted the best employee and for achieving more goals, respectively.
                             </p>
                         </div>
                         <div>
@@ -579,22 +586,23 @@
                         <div>
                       <p>
                         Galy is a cellular agriculture company. Cell agg can produce differente plant culture using less water, energy, land, and chemicals.
-                        The company wanted to convey an urgency feeling to investors to convince
+                        The company wanted to convey an urgency sentiment to investors to convince
                         them to join the cause. Lucas co-produced a VR video and filmed the documentary in the Chapada dos Guimaraes national park 
-                        in partnership with 360labs to showcase the companies' susteinable mission to investors and clients.
-                        The video was later published on 
-                        <a href="https://www.forbes.com/sites/jeffkart/2023/07/08/lab-grown-cotton-enters-the-market-with-galy-suzuran-partnership/?sh=63d9c7b81c9f">forbes</a>.
+                        in partnership with 360labs to showcase the companies' susteinable mission to investors and clients. Later,  
+                        <a href="https://www.forbes.com/sites/jeffkart/2023/07/08/lab-grown-cotton-enters-the-market-with-galy-suzuran-partnership/?sh=63d9c7b81c9f">forbes</a>
+                        published the video.
                     </p>
                     <p> 
-                        Lucas had the idea to share a personal experience to emotionally touch the investors. He, once travelled to Chapada dos Guimaraes.
-                        A place with a stunning landscape. However, that natural beauty was being swalloed by farms. Lucas was astonished when he saw an endless green
+                        Lucas had the idea to share a personal experience to emotionally touch the investors. He once travelled to Chapada dos Guimaraes -
+                        a place with a stunning landscape. However, that natural beauty was being swalloed by farms. Lucas was astonished when he saw an endless green
                         desert filled with cotton and destruction on the edge of the natural park. 
                     
                       </p>
                       <p>
-                        Among Lucas's responsabilities were to lead the team of 4 people in Brazil, write the plot, find proper rental pieces of equipment and take care
-                        of documentation to bring some devices to Brazil - the film has a stereoscopic 360 technology, has flying shots, underwater shots, shots in tight spaces 
-                        (required a wide variety of equipment), find locations to film and get required authorization, find relevant interviewees, plan logistics and schedule, quote hotels, food, and transportation,
+                        Lucas accepted the challenge to tell his story. 
+                        Among his responsabilities were to lead the team of 4 people in Brazil, write the plot, find proper rental pieces of equipment and take care
+                        of documentation to bring some devices to Brazil - the film has a stereoscopic 360 technology, flying shots, underwater shots, shots in tight spaces -
+                        find locations to film and get required authorization, find relevant interviewees, plan logistics and schedule, quote hotels, food, and transportation,
                         drive the filming team to the filming location, translate the interviews, and provide feedback to the editor.   
                       </p>
                     </div>
@@ -622,13 +630,12 @@
                     </div>
                     <div class="modal-body proj-description">
                       <p>
-                        One of the problems the scientists were facing at Galy was to analyse the cotton fibers.
-                        They could not measure the cells because they were entangling around each other.
-                        A 2D image was not able to analyse overlapping cells. Lucas proposed to analyse a 3D scan of the cells.
-                        An extra dimension can provide more information to the analysis.
-
-                        A 3D scan technique was developed to scan the cells. Lucas developed a VR app to visualize and annotate the 
-                        3D cell models. The app shrinked the scientists to a cellular level and enabled the fiber analysis from a close distance.
+                        One of the problems the scientists were facing at Galy was to analyse the cotton fibers. 
+                        They could not measure the cells because they were entangling around each other. 
+                        A 2D image was not able to analyse overlapping cells. Lucas proposed the 3D scan of the cells analysis - 
+                        an extra dimension can provide more information and developed A 3D scan method to obtain the point cloud. 
+                        Lucas developed a VR app to visualize and annotate the 3D cell models. 
+                        The app shrinked the scientists to a cellular level and enabled the fiber analysis from a close distance. 
                         The next step would be to create an AI to segmentate and measure the fibers.
                       </p>
                       <div class="modal-grid">
@@ -652,10 +659,11 @@
                     </div>
                     <div class="modal-body proj-description">
                         <p>
-                          A datalogger that transmited data from a low-cost bioreactor to the cloud was developed.
-                          The datalogger used a ESP8266, a thermocouple, a ph meter, and a DO sensor.
-                          A mobile app was developed to configure and calibrate the sensors. The system collected data regularly and sent it to the cloud.
-                          The data can be accessed via a website that plotted the data in a chart.
+                          Lucas developed a datalogger that transmited data from a low-cost bioreactor to the cloud.
+                          The datalogger used a ESP8266, a thermocouple, a ph meter, and a DO sensor. 
+                          The user could configure and calibrate the sensors through a mobile portal. 
+                          The system collected data regularly and sent it to the cloud. 
+                          The data is accessable via a website that plotted the data in a chart.
                         </p>
                         <img class="img-modal" src="img/031-sensores.png">
                     </div>
@@ -697,15 +705,13 @@
                     </div>
                     <div class="modal-body proj-description">
                       <p>
-                        Lucas graduation thesis is an automation project for bakeries and grocery stores, using the YOLOv4 object detector. 
-                        A self-checkout cashier was developed where the client puts a tray with the products underneath a webcam, 
-                        and the system returns the total price of the purchase. 
-                        To achieve this goal, it was developed some process and protocols, a user interface, a admin interface,
-                        a segmentation algorithm - to automatically segmentate the training data, 
-                        and a server to integrate it all. The menu defined for this research was composed by 10 items - 
+                        Lucas graduation thesis - presented at INDUSCON and published by IEEE - is an automation project for bakeries and grocery stores, using the YOLOv4 object detector. 
+                        The team developed a self-checkout cashier wherein the client puts a tray with the products underneath a webcam, 
+                        and the system returns the total price. To achieve this goal, the group developed some process and protocols, 
+                        a user interface, a admin interface, a segmentation algorithm - to automatically segmentate the training data, 
+                        and a server to integrate it all. The menu defined for this research was composed by ten items - 
                         coke, guaraná, coxinha, banana, apple, ice tea, choux cream, eclair, cheese bread, and bread - 
-                        and the mAP obtained for our test set was 91.52% and 96.25%, when all requisites were respected. 
-                        The research was presented at INDUSCON and published by IEEE
+                        and the mAP obtained for our test set was 91.52% and 96.25%. 
                         <a href="https://ieeexplore.ieee.org/document/9529909">(the paper)</a>.
                       </p>
                           <img class="img-modal" src="img/011-tcc.gif">
@@ -727,34 +733,35 @@
                         <div class="modal-grid">
                             <div>
                                 <p>
-                                    <a href="https://bv.fapesp.br/pt/pesquisador/698297/lucas-kyoshi-miyazaki/">FAPESP</a> granted Lucas a scholarship 
-                                    to conduct a research on teeth scan. The research was presented at SIICUSP.
-                                    Later, Lucas was invited to continue his research at The University of Tokyo (#23 QS ranking, 2019). Lucas studied CG, computational geometry,
-                                    and mesh segmentation during his time in Japan. 
-                                
-                                    The entire research consisted in 5 steps: teeth mold scan, point cloud processing, surface reconstruction, mesh processing, 
-                                    and segmentation of the teeth. The research was presented at ICGG and the paper was published 
+                                    <a href="https://bv.fapesp.br/pt/pesquisador/698297/lucas-kyoshi-miyazaki/">FAPESP</a> 
+                                    granted Lucas a scholarship to conduct a research on teeth scan presented at SIICUSP. 
+                                    Later, Lucas was invited to continue his research at The University of Tokyo (#23 QS ranking, 2019). 
+                                    Lucas studied CG, computational geometry, and mesh segmentation in Japan. 
+                                    The entire research consisted in 5 steps: teeth mold scan, point cloud processing, surface reconstruction, 
+                                    mesh processing, and segmentation of the teeth. The research was presented at ICGG and the paper was published
                                     <a href="https://www.researchgate.net/publication/347289425_Teeth_Mesh_Segmentation_Through_Curvature_Analysis">here</a>. 
-                                
                                 </p>
                                 <p>
-                                    On the first step, Instead of scanning the mouth, Lucas proposed to scan the negative mold. 
-                                    3 different methods were used to scan the mold. We used a low-cost equipment called horus that uses photogrametry.
-                                    We used kinect that has a depth camera. We used a interferometry scanner. The interferometry scanner obtained the best result,
-                                    followed by the horus, and kinect. We concluded that kinect is not suited for scanning small objects.
-                                    During this step, Lucas studied about camera calibration,
-                                    point cloud processing and visualization, and different scanning methods.
+                                    On the first step, the team proposed to scan the negative mold instead of the mouth scanner. 
+                                    The research used three distinct methods to scan the mold: a low-cost equipment called Horus that uses photogrametry, 
+                                    Xbox Kinect that has a depth camera, and an interferometry scanner. 
+                                    The interferometry scanner obtained the best result, followed by the Horus, and Xbox Kinect. 
+                                    We concluded that kinect is not suited for scanning small objects. 
+                                    During this step, Lucas studied about camera calibration, point cloud processing and visualization, 
+                                    and different scanning methods.
                                 </p>
                                 <p>
-                                    Secondly, the resulted point cloud was filtered and concatenated. Many diferent scans were performed in different angles in order
-                                    to avoid missing any detail. To join the various point cloud together an algorithm called ICP was used. The algorithm tries to find
-                                    common charateristic features in each sample to stitch them together.
+                                    Secondly, the resulted point cloud was filtered and concatenated. 
+                                    Many diferent scans were performed in different angles in order to avoid any missing detail. 
+                                    The ICP algorithm that stitches common features from each sample joined the various point cloud. 
                                 </p>
                                 <p>
-                                    Then, the mesh is reconstructed. 2 methods were tested: marching cubes and poisson. The reconstructed mesh is smoothed by calculating
-                                    the normal vectors. A region growing based on the curvature threshold is applied to the mesh to segmentate the teeth.
-                                    Some heuristics were assumed in order to improve the accuracy of the algorithm. For instance, we re-positioned the teeth to face upwards
-                                    by calculating the principal components of the model.
+                                    Then, two methods tried to reconstruct the surface: marching cubes and poisson. 
+                                    Next, normal vectors in each vertex smoothed the reconstructed mesh and a region growing algorithm 
+                                    based on the curvature threshold is applied to the mesh to segmentate the teeth. 
+                                    The team assumed some heuristics to improve the accuracy of the algorithm. 
+                                    For instance, the program re-positioned the teeth to face upwards by calculating the principal components 
+                                    of the model and considered that the bottom part of the mesh is the gum.
                                 </p>
                             </div>
                             <div>
@@ -810,9 +817,9 @@
                       <p>
                         In 2020, during a hackathon, Lucas and his team worked on a project to solve a Covid related problem.
                         A problem people faced during the pandemic was to avoid crowds when going to the supermarket.
-                        Lucas developed an app to track the amount of people in each supermarket by using a google maps API.
-                        The app also predicted the best time and place for a person to go shopping and plotted a map indicating 
-                        the amount of people in each establishment. The algorithm can be found on 
+                        The team developed an app to track the amount of people in the supermarket. The app extracted data from google maps API
+                        and plotted a map indicating the amount of people in each establishment.
+                        The app also predicted the best time and place for a person to go shopping. The algorithm can be found on 
                         
                         <a href="https://github.com/lucaskmiyazaki/corona_mall/blob/master/website.ipynb">github</a>. 
 
@@ -820,10 +827,11 @@
                       <img class="img-modal" src="img/hackathon2.png">
                       <img class="img-modal" src="img/hackaton.jpeg">
                       <p>
-                        As a result, Lucas and his team won the hackathon. Lucas was hired to work for Visagio in a newly created project
-                        called V360. The product consisted in automatic receipt of invoices. Lucas worked on an OCR module to read 
-                        invoices in .jpg and .png format. Lucas used Tesseract and region growing segmentation algorithm to separate each 
-                        section of the document.  
+                        As a result, the team won the hackathon. Visagio hired Lucas 
+                        to work in a newly created project called V360. The product consisted in an automatic receipt of invoices. 
+                        Lucas worked on an OCR module to read 
+                        invoices in .jpg and .png format. Lucas used Tesseract and region growing segmentation algorithm to separate the 
+                        sections of the document.  
                         
                       </p>
                           
@@ -847,16 +855,16 @@
                         <div>
                       <p>
                         The Bsc in Engineering at USP is a highly competitive course to enter in Brazil.
-                        USP is #85 in QS world ranking and #1 in Brazil. 
-                        Lucas was granted a <a href="https://bv.fapesp.br/pt/pesquisador/698297/lucas-kyoshi-miyazaki/">FAPESP</a>
-                        scholarship. FAPESP only grants scholarships to top students.
+                        USP is #85 in QS world ranking and #1 in the country. 
+                        <a href="https://bv.fapesp.br/pt/pesquisador/698297/lucas-kyoshi-miyazaki/">FAPESP</a> granted Lucas a
+                        scholarship. FAPESP only rewards scholarships to top students.
                     </p>
                     <p>
-                        The Mechatronics engineering course 
-                        provides a strong basis in mechanical, control, electronical, and software engineering.
-                        The Mechatronics engineering student participates on machine design and industry automation project.
-                        Besides the regular curriculum, Lucas enrolled in classes related to product design, material science, 
-                        integrated circuit design, precision engineering, AI/machine learning, and linear optimization.
+                        The Mechatronics engineering course provides a strong knowledge base in mechanical, 
+                        control, electronical, and software engineering. 
+                        The Mechatronics engineering student participates on many machine design, robot development, and industry automation projects. 
+                        Besides the regular curriculum, Lucas enrolled in classes related to product design, 
+                        material science, integrated circuit design, precision engineering, AI/machine learning, and linear optimization.
                       </p>
                     </div>
 
@@ -880,17 +888,15 @@
                       <div class="modal-grid">
                         <div>
                             <p>
-                                During college, Lucas participated in numerous volunteer work.
-                                As his education was completely funded by the government, Lucas wanted to do something in return
-                                to society. His most relevant work includes: a project for the elderly's psicomotor stimulus;
-                                a basic computer usage course for the community around USP; a support for foreign students and 
-                                Brazilian student who wanted to study abroad; a math, english and art class for kids in a poor community;
-                                and a summer camp for teenagers.  
+                                As the government funded 100% of his education, Lucas wanted to return the investment to society. 
+                                Thus, during college, Lucas participated in numerous volunteer work: 
+                                an elderly care project; a computer usage course; a support for exchange students; 
+                                a math, english, and art class for kids; a summer camp for teenagers; etc.
                               </p>
                               <p>
-                                Lucas co-founded and lead the Maduros project. The team went regularly to a nursing house to play songs,
-                                talk, and do stimulating activities such as painting, crafting, and games. The team also talked to many experts in the 
-                                field to understand the best types of activities. 
+                                Lucas co-founded and lead the Maduros project. 
+                                The team regularly went to a nursing house to play songs, talk, and do stimulating activities such as painting, crafting, and games. 
+                                The team also discussed with many experts in the field to understand the best types of activities.
                             </p>
                         </div>
 
@@ -899,22 +905,25 @@
 
                             <div>
                                 <p>
-                                    Lucas was an instructor at the Poli Cidada project. Lucas taught basic computer usage to USP employees 
-                                    and other people who lived close to the university. The course included how to turn on/off the computer,
-                                    how to deal with bugs, how to navigate the browser, how to use word, power point, excel, and google drive,
-                                    how to avoid virus and malicious programs.
+                                    Lucas was an instructor at the Poli Cidada project. 
+                                    Lucas taught computer usage basics to USP employees and other people living close to the university. 
+                                    The course included how to turn on/off the computer; deal with bugs; navigate the browser; 
+                                    use word, power point, excel, and google drive; and avoid virus and malicious programs.
                                 </p>
                                 <p>
-                                    Lucas was also part of iPoli, an international club that helped foreign students. Among his responsabilities,
-                                    Lucas organized events such as welcome day - to explain about the university and life in Brazil, a city tour week,
-                                    a bureaucracy day - to help the students with all the needed documents, an international night to connect brazilian people
-                                    to exchange students, parties, trips, and lectures with tips of how to pass at an exchange program. Lucas also created an HR
-                                    department in the group to engage members and organize the team.
+                                    Lucas was also part of iPoli, an international club that helped exchange students. 
+                                    Among his responsabilities, Lucas organized events such as welcome day - 
+                                    to explain about the university and life in Brazil, a city tour week, a bureaucracy day - 
+                                    to help the students with all the needed documents, 
+                                    an international night to connect brazilian people to exchange students, parties, trips, 
+                                    and lectures with tips of how to pass at an exchange program. 
+                                    Lucas also created an HR department to engage members and organize the team.
                                 </p>
                                 <p>
-                                    Lucas spent 2 months in Barranquilla (Colombia) teaching math, english, and arts to children and a poor community.
-                                    Lucas also helped organizing events at Fundacion Amor Fiel. Lastly, Lucas worked as summer camp staff during january 
-                                    at acantonavolley for 5 years. He organized games and took care of kids and teenager between 6 to 19 years old.
+                                    Lucas spent two months in Barranquilla (Colombia) teaching math, english, and arts to children in a poor community. 
+                                    Lucas also helped organizing events at Fundacion Amor Fiel. 
+                                    Lastly, Lucas worked as a summer camp staff every january at acantonavolley (from 2016 to 2019). 
+                                    The staff team did games and took care of kids and teenagers.
                                   </p>
                             </div>
 
