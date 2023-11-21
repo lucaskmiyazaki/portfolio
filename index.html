@@ -53,7 +53,7 @@
                         Designer · Computational Geometry Expert · Web Developer
                     </h5>
                     <p>
-                        What moves me is to design technologies that augment human capabilities and defy the boundaries of what seems impossible. 
+                        What moves me is to design technologies that augment human capabilities and defy the boundaries of what seems possible. 
                         I graduated in mechatronics engineering from USP, interned at the University of Tokyo, 
                         and worked on biotech companies as Galy and Tissuelabs, developing disruptive technologies.
                     </p>
@@ -181,14 +181,14 @@
                             <p class="skill-title">
                                 Ability to virtually recreate our world with numbers and bits and to turn bits into tangible things:
                             </p>
-                            <p id="skill-geo" class="skill-text">
-                                experience with scanning methods (such as photogrammetry, interferometry, and depth cameras);
-                                expertise in 2D/3D data processing (such as segmentation algorithms, mesh reconstruction, ICP, etc.);
-                                skills to develop my own CAD/CAM (using threejs or c++);
-                                knowledge in with gcode and slicing (for 3D printers) and motion planning algorithms;
-                                familiarity with VR apps/videos development (Unity, threejs, 360 cameras);
-                                capacity to develop machine learning models, especially for computer vision (such as object classification and OCR);
-                            </p>
+                                <ul id="skill-geo" class="skill-text">
+                                    <li>experience with scanning methods (such as photogrammetry, interferometry, and depth cameras);</li>
+                                    <li>expertise in 2D/3D data processing (such as segmentation algorithms, mesh reconstruction, ICP, etc.);</li>
+                                    <li>skills to develop my own CAD/CAM (using threejs or c++);</li>
+                                    <li>knowledge in with gcode and slicing (for 3D printers) and motion planning algorithms;</li>
+                                    <li>familiarity with VR apps/videos development (Unity, threejs, 360 cameras);</li>
+                                    <li>capacity to develop machine learning models, especially for computer vision (such as object classification and OCR);</li>
+                                </ul>
                             <h5 onclick="showMore('geo')" id="arrow-geo" class="skill-arrow">&#65088;</h5>
 
                         </div>
@@ -197,14 +197,14 @@
                             <p class="skill-title">
                                 Capacity to transform my ideas into virtual products:
                             </p>
-                            <p id="skill-soft" class="skill-text">
-                                vast experience in various programming languages (python, C, C++, C#, Ruby, etc.) and ease of learning new ones;
-                                ability to design beautiful frontend apps (with HTML, CSS, React, Bootstrap, Javascript, threejs);
-                                backend framework (such as Rails, Flask, Node) and database (SQL) skills;
-                                ability to run my app in cloud platforms (AWS and google cloud) and set up the cloud environment (with docker or vm);
-                                capacity to develop computer apps and create installable files (WinForms, Unity, pyinstaller, inno setup);
-                                experience in developing programs collaboratively (git, GitHub, google collab, VScode Live Share)
-                            </p>
+                            <ul id="skill-soft" class="skill-text">
+                                <li>vast experience in various programming languages (python, C, C++, C#, Ruby, etc.) and ease of learning new ones;</li>
+                                <li>ability to design beautiful frontend apps (with HTML, CSS, React, Bootstrap, Javascript, threejs);</li>
+                                <li>backend framework (such as Rails, Flask, Node) and database (SQL) skills;</li>
+                                <li>ability to run my app in cloud platforms (AWS and google cloud) and set up the cloud environment (with docker or vm);</li>
+                                <li>capacity to develop computer apps and create installable files (WinForms, Unity, pyinstaller, inno setup);</li>
+                                <li>experience in developing programs collaboratively (git, GitHub, google collab, VScode Live Share)</li>
+                            </ul>
                             <h5 onclick="showMore('soft')" id="arrow-soft" class="skill-arrow">&#65088;</h5>
                         </div>
                         <div>
@@ -212,13 +212,13 @@
                             <p class="skill-title">
                                 Capacity to turn my ideas into tangible products:
                             </p>
-                            <p id="skill-mech" class="skill-text">
-                                skilled in CAD/CAM software (such as Fusion360 and Openscad) and 
-                                capable of combining techniques (scanning, coding, modeling) to create organic complex shapes; 
-                                experienced in prototyping using 3D printers (FDM and SLA);
-                                familiar with manufacturing techniques (molding and casting, laser cut, CNC machine);
-                                knowledgeable about developing precise machine for sterile environments
-                            </p>
+                            <ul id="skill-mech" class="skill-text">
+                                <li>skilled in CAD/CAM software (such as Fusion360 and Openscad) and 
+                                capable of combining techniques (scanning, coding, modeling) to create organic complex shapes; </li> 
+                                <li>experienced in prototyping using 3D printers (FDM and SLA);</li>
+                                <li>familiar with manufacturing techniques (molding and casting, laser cut, CNC machine);</li>
+                                <li>knowledgeable about developing precise machine for sterile environments</li>
+                            </ul>
                             <h5 onclick="showMore('mech')" id="arrow-mech" class="skill-arrow">&#65088;</h5>
                         </div>
                         <div>
@@ -226,12 +226,12 @@
                             <p class="skill-title">
                                 Ability to make machines move, sense, and respond in the cheapest and most optimized way:
                             </p>
-                            <p id="skill-control" class="skill-text">
-                                capacity to design electromechanical devices, pneumatic systems and other fluidic circuits;
-                                knowledge in electronics such as prototyping platforms (arduino, RaspPi) and PCB design and fabrication;
-                                strong theoretical system control knowledge;
-                                experience working with a wide variety of sensors and actuators
-                            </p>
+                            <ul id="skill-control" class="skill-text">
+                                <li>capacity to design electromechanical devices, pneumatic systems and other fluidic circuits; </li> 
+                                <li>knowledge in electronics such as prototyping platforms (arduino, RaspPi) and PCB design and fabrication; </li> 
+                                <li>strong theoretical system control knowledge; </li> 
+                                <li>experience working with a wide variety of sensors and actuators </li> 
+                            </ul>
                             <h5 onclick="showMore('control')" id="arrow-control" class="skill-arrow">&#65088;</h5>
                         </div>
                     </div>
@@ -436,21 +436,22 @@
                     </div>
                     <div class="modal-body proj-description">
                       <p>
-                        Tissuelabs is a tissue engineering startup. The company's dream was to manufacture an artificial transplantable heart. 
-                        Lucas proposed the first organ-on-a-chip produced by the company using stereolithography 3D printers. 
-                        Organ-on-a-chip is an organ model that simulates activities, mechanics, and physiological response. 
-                        The model has a 3D microfluidic circuit integrated with a cell culture. 
-                        Each channel can represent blood vessels and other parts of the human body. 
-                        For instance, an alveoli model is basically an air sac and a network of blood vessels around the sac.
-                     </p>
-                     <p>
-                        Lucas was responsible for designing and testing most organ-on-a-chip and microfluidics 3D models at Tissuelabs. 
-                        He developed more than 50 different models - 
-                        used by scientists to conduct experiments and also used by the company to showcase the equipment's capabilities. 
+                        TissueLabs is a tissue engineering startup. The company's dream was to manufacture an artificial transplantable heart. 
+                        Lucas designed and tested more than 50 different organ-on-a-chip models using stereolithography 3D printers. 
                         The company's 
                         <a href="https://www.youtube.com/watch?v=-xNT_aEYsuQ">video</a>
                         shows some of these models.
                       </p>
+                      <p>
+                        Organ-on-a-chip is an organ model that simulates activities, mechanics, and physiological response. 
+                        The model has a 3D microfluidic circuit integrated with a cell culture. 
+                        Each channel can simulate blood vessels and other parts of the human body. 
+                     </p>
+                     <p>
+                        For instance, the intestine chip is a rugose duct - where digested food pass - wrapped by coil-shaped duct 
+                        - where blood pass. Another examples is the alveoli chip that is an air sac wrapped by a dodecahedronal 
+                        network of vessels.
+                     </p>
                       
                       <div class="modal-grid">
                           <img class="img-modal" src="img/015-chip.gif">
@@ -458,6 +459,17 @@
                           <img class="img-modal" src="img/026-chip.gif">
                           <img class="img-modal" src="img/027-chip.jpeg">
                         </div>
+                        <br>
+                        <p>
+                            The goal is to eventually create a model that can perfectly imitate the human body to 3D print a transplantable organ. 
+                            Until then, these models can be used to test chemicals replacing animal testing.
+                        </p>
+                        <p>
+                            Lucas tested different methods of production such as stereolithography and extrusion in a coagulation bath. 
+                            Lucas also tested different printing parameters and model shapes to ensure the chip was printable.
+                            The tests were first ran with flexible resin and then with bioinks.
+                        </p>
+                        <img src="img/mold.jpg">
                     </div>
                 </div>
             </div>
@@ -488,13 +500,15 @@
                               </p>
                               <p>
                                 Finally, Lucas developed CAD software to generate organ-on-a-chip 3D models based on a 2D drawing made by the user. 
-                                The user had two tools available: The first tool can draw the object contour. The second tool draws the vessels' path.
+                                The CAD consisted in 2 simple tools: The first tool can draw the object contour. The second tool draws the vessels' path.
+                                The software extrudes the shape formed by the contour and creates channels based on the vessel's path.
                               </p>
                         </div>
                         <div>
                             <img class="img-modal" src="img/028-software.gif">
                             <img class="img-modal" src="img/029-software.gif">
                             <img class="img-modal" src="img/022-pipette.gif">
+                            <img class="img-modal" src="img/cad.png">
                         </div>
                       </div>
                     </div>
@@ -517,7 +531,21 @@
                             <p>
                                 Tissuelabs produced bioinks - an extra-cellular matrix extracted from animal and vegetal sources. 
                                 Lucas developed two low-cost bioreactors used in the bioink production process. 
-                                Lucas was also responsible for fixing lab equipment such as bag sealers, magnetic stirrers, bioreactors, autoclave, 
+                            </p>
+                            <p>
+                                The first bioreactor can mix animal tissue with decellularizing substances. The machine has two separate parts: 
+                                the removable module made of PLA where the electric motor and all the electronics is;
+                                and the autoclavable jacketed flask whose lid was made of autoclavable resin, sealed with a rubber ring, and had grooves to attach the upper module. 
+                            </p>
+                            <p>
+                                The second bioreactor can wash organic mass. 
+                                The machine has a magnetic stirrer (powered by an electric motor) and a jar with an input and an output hose. 
+                                A pump is connected to the output and 
+                                ionized water is sucked from the input. The bottle cap that sealed each bottle is made of autoclavable material 
+                                and prevents from external contamination.
+                            </p>
+                            <p>
+                                Lucas was also responsible for fixing lab equipment such as bag sealers, magnetic stirrers, bioreactors, autoclaves, 
                                 3D printers, and centrifuges.
                             </p>
                             <p>
@@ -529,6 +557,7 @@
                             </p>
                         </div>
                         <div>
+                            <img class="img-modal" src="img/bioreactor.JPG">
                             <img class="img-modal" src="img/021-bioreactor.gif">
                             <img class="img-modal" src="img/018-premio.gif">
                         </div>
@@ -593,13 +622,12 @@
                         published the video.
                     </p>
                     <p> 
-                        Lucas had the idea to share a personal experience to emotionally touch the investors. He once travelled to Chapada dos Guimaraes -
-                        a place with a stunning landscape. However, that natural beauty was being swalloed by farms. Lucas was astonished when he saw an endless green
-                        desert filled with cotton and destruction on the edge of the natural park. 
-                    
+                        During a family trip, when Lucas travelled to Chapada dos Guimarães - a place with a stunning landscape, 
+                        he saw the natural beauty being swallowed by farms. 
+                        That endless green desert filled with cotton and destruction on the edge of the natural park was scary. 
+                        Therefore, Lucas had the idea to share this personal experience to emotionally touch the investors.  
                       </p>
                       <p>
-                        Lucas accepted the challenge to tell his story. 
                         Among his responsabilities were to lead the team of 4 people in Brazil, write the plot, find proper rental pieces of equipment and take care
                         of documentation to bring some devices to Brazil - the film has a stereoscopic 360 technology, flying shots, underwater shots, shots in tight spaces -
                         find locations to film and get required authorization, find relevant interviewees, plan logistics and schedule, quote hotels, food, and transportation,
@@ -632,14 +660,14 @@
                       <p>
                         One of the problems the scientists were facing at Galy was to analyse the cotton fibers. 
                         They could not measure the cells because they were entangling around each other. 
-                        A 2D image was not able to analyse overlapping cells. Lucas proposed the 3D scan of the cells analysis - 
-                        an extra dimension can provide more information and developed A 3D scan method to obtain the point cloud. 
-                        Lucas developed a VR app to visualize and annotate the 3D cell models. 
-                        The app shrinked the scientists to a cellular level and enabled the fiber analysis from a close distance. 
-                        The next step would be to create an AI to segmentate and measure the fibers.
+                        A 2D image was not able to analyse overlapping cells.
+                      </p>
+                      <p>
+                        Lucas proposed to 3D scan the cells. 
+                        Besides the scan method, Lucas developed a VR app to visualize and annotate the 3D cell models. 
+                        The app shrunk the scientists to a cellular level and enabled the fiber analysis from a close distance.
                       </p>
                       <div class="modal-grid">
-
                           <img class="img-modal" src="img/047-vr.JPG">
                           <img class="img-modal" src="img/054-fiber.png">
                     </div>
@@ -659,11 +687,11 @@
                     </div>
                     <div class="modal-body proj-description">
                         <p>
-                          Lucas developed a datalogger that transmited data from a low-cost bioreactor to the cloud.
-                          The datalogger used a ESP8266, a thermocouple, a ph meter, and a DO sensor. 
-                          The user could configure and calibrate the sensors through a mobile portal. 
-                          The system collected data regularly and sent it to the cloud. 
-                          The data is accessable via a website that plotted the data in a chart.
+                            Lucas developed a data logger that transmitted data from a low-cost bioreactor to the cloud. 
+                            The data logger used a ESP8266, a thermocouple, a ph meter, and a DO sensor. 
+                            The user could configure and calibrate the sensors through a mobile portal.
+                            The system collected data regularly and sent it to the cloud. 
+                            The user could also access the plotted data in a website.
                         </p>
                         <img class="img-modal" src="img/031-sensores.png">
                     </div>

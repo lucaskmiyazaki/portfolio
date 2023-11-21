@@ -12,7 +12,6 @@ renderer.setSize( innerWidth, innerHeight );
 document.body.appendChild( renderer.domElement );
 scene.background = new THREE.Color( 0xffffff );
 const raycaster = new THREE.Raycaster();
-const pointer = new THREE.Vector2();
 
 let radius = 2;
 let geometry = new THREE.IcosahedronGeometry(1, 1);
@@ -35,6 +34,10 @@ let clock = new THREE.Clock();
 const cursor = {}
 cursor.x = 0
 cursor.y = 0
+
+const pointer = {}
+pointer.x = 0
+pointer.y = 0
 
 window.addEventListener('mousemove', (event) =>
 {
@@ -90,7 +93,7 @@ renderer.setAnimationLoop( () => {
   
   raycaster.setFromCamera(pointer, camera);
   let intersects = raycaster.intersectObjects( scene.children );
-  if (intersects.length > 0) {
+  if (intersects.length > 0 && !(pointer.x === 0 && pointer.y === 0)) {
     isIntersecting = true;
     bagtip.style.visibility = 'visible';
   } else{

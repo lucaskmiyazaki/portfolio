@@ -1,6 +1,7 @@
 // --------------------------Navbar ----------------------
 const navbarSections = document.querySelectorAll(".nav-item")
 window.location.href = "#home"
+var prevEntry, currentEntry;
 
 removeActiveClass = () => {
     navbarSections.forEach(section => {
@@ -14,7 +15,13 @@ addActiveClass = (entries, observer) => {
         let currentSection;
         if(entry.isIntersecting){
             removeActiveClass();
+            prevEntry = currentEntry
             currentSection = document.querySelector(`#btn-${entry.target.id}`)
+            currentEntry = entry
+        } else if (currentEntry && currentEntry.target.id === entry.target.id){
+            removeActiveClass();
+            currentSection = document.querySelector(`#btn-${prevEntry.target.id}`)
+            currentEntry = prevEntry
         }
 
         if (currentSection){
