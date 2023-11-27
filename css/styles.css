@@ -1,9 +1,16 @@
 :root {
-  --primary: rgba(29, 106, 154, 0.72);
+  --first-cover: rgba(29, 106, 154, 0.72);
+  --second-cover: rgba(127, 176, 105, 0.72);
+  --third-cover: rgba(235, 197, 82, 0.72);
+  --forth-cover: rgba(230, 145, 56, 0.72);
+  --fifth-cover: rgba(29, 106, 154, 0.72);
   --secondary: #222222;
   --footer: #222222;
   --header: #222222;
+  --h1-size: 10vw;
+  --h2-size: 3vw;
   --h3-size: 1.7vw;
+  --h4-size: 5vw;
   --h5-size: 2vh;
   --p-size: 1.5vh;
 }
@@ -13,13 +20,12 @@ html{
 }
 
 h1{
-  font-size: 10vw;
-  font-weight: 900;
+  font-size: var(--h1-size);
   font-family: 'Bungee Hairline';
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: var(--h2-size);
   font-family: 'Bungee';
   margin: 0px;
 }
@@ -221,25 +227,59 @@ canvas {
   position: relative;
 }
 
-.blank-proj1 {
+.blank-proj {
   object-fit: cover;
   width: 100%;
   max-height: 100%;
-  background-color: var(--primary);
   opacity: 1;
 }
-.blank-proj2 {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  background-color: var(--primary);
-  opacity: 1;
+
+.blank1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1vw;
+}
+
+.blank2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1vw;
+}
+
+.blank3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1vw;
+}
+
+.align-left {
+  text-align: right;
+}
+
+h4 {
+  color: white;
+  margin: 0px;
+  font-family: 'Bungee Hairline';
+  font-size: var(--h4-size);
 }
 
 .proj-img {
   object-fit: cover;
   width: 100%;
   max-height: 100%;
+  -webkit-filter: grayscale(0%); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(0%); /* Microsoft Edge and Firefox 35+ */
+}
+
+.proj-btn:hover .proj-img {
+  -webkit-filter: grayscale(100%); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(100%); /* Microsoft Edge and Firefox 35+ */
 }
 
 .img-cover {
@@ -248,7 +288,6 @@ canvas {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  background: var(--primary);
   opacity: 0;
   z-index: 10;
 
@@ -262,13 +301,33 @@ canvas {
   transition: opacity .2s, visibility .2s;
 }
 
+.cover1 {
+  background: var(--first-cover);
+}
+
+.cover2{
+  background: var(--second-cover);
+}
+
+.cover3{
+  background: var(--third-cover);
+}
+
+.cover4{
+  background: var(--forth-cover);
+}
+
+.cover5{
+  background: var(--fifth-cover);
+}
+
 .img-description {
   color: #fff;
 }
 
 .proj-btn:hover .img-cover {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.75;
 }
 
 .modal-header{
