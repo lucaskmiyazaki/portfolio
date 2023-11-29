@@ -140,9 +140,13 @@ canvas {
   grid-template-columns: 1fr 1fr;
   column-gap: 2vh;
 }
+.skill-title {
+  cursor: pointer;
+}
 
 .skill-text {
   display: none;
+  cursor: pointer;
 }
 
 .skill-arrow {
@@ -282,6 +286,11 @@ h4 {
   filter: grayscale(100%); /* Microsoft Edge and Firefox 35+ */
 }
 
+.proj-btn:hover .bright-img {
+  -webkit-filter: grayscale(100%) brightness(65%); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(100%) brightness(65%); /* Microsoft Edge and Firefox 35+ */
+}
+
 .img-cover {
   position: absolute;
   top: 0;
@@ -293,12 +302,20 @@ h4 {
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 1vw;
+  gap: 1vw;
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
+}
+
+.reversed-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .cover1 {
@@ -321,13 +338,19 @@ h4 {
   background: var(--fifth-cover);
 }
 
+.img-title {
+  color: #fff;
+  cursor: pointer;
+}
+
 .img-description {
   color: #fff;
+  cursor: pointer;
 }
 
 .proj-btn:hover .img-cover {
   visibility: visible;
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .modal-header{
