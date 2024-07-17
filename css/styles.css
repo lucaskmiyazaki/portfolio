@@ -9,10 +9,10 @@
   --header: #222222;
   --h1-size: 10vw;
   --h2-size: 3vw;
-  --h3-size: 1.7vw;
+  --h3-size: 2vw;
   --h4-size: 5vw;
-  --h5-size: 2vh;
-  --p-size: 1.5vh;
+  --h5-size: 2vw;
+  --p-size: 1vw;
 }
 
 html{
@@ -49,6 +49,7 @@ p {
 }
 
 ul {
+  font-size: var(--p-size);
   font-weight: 100;
   font-family: 'Courier Prime';
 }
