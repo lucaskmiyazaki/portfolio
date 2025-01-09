@@ -12,7 +12,7 @@
     --hex-increment: calc(var(--hex-width) + var(--h-length) - var(--hex-border-radius)/2);
     --diagonal1-x-offset: calc(var(--line-x-offset) - var(--hex-tip-height) - var(--hex-border-radius));
     --diagonal2-x-offset: calc(var(--h-length) + var(--line-x-offset) - var(--hex-tip-height)/2 - var(--hex-border-radius)/2);
-    --label-font-size: calc(var(--hex-height) / 4.5);
+    --label-font-size: calc(var(--hex-height) / 5);
 }
 
 .honeycomb{
@@ -74,7 +74,7 @@ h6 {
     100% {transform: scale(0.8);}
 }
 
-.selectable-hex:hover{
+.selectable-hex-kasdmkamkdmask:hover{
     animation: spin;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -156,6 +156,16 @@ h6 {
     left: calc(5*var(--hex-increment));
 }
 
+.line6 {
+    top: calc(var(--hex-height) * 2);    
+    left: calc(var(--line-x-offset) + 5*var(--hex-increment));
+}
+
+.hex7 {
+    top: calc(var(--hex-height) * 3 / 2);
+    left: calc(6*var(--hex-increment));
+}
+
 .bottom-line1 {
     top: calc( var(--hex-height) * 11 / 4);
     left: var(--diagonal1-x-offset);
@@ -180,6 +190,16 @@ h6 {
     transform: rotate(120deg);
 }
 
+.bottom-hex2 {
+    top: calc(var(--hex-height) * 3);
+    left: calc( var(--hex-x-offset) + 5*var(--hex-increment) );
+}
+
+.bottom-line4 {
+    top: calc( var(--hex-height) * 11 / 4);
+    left: calc(var(--diagonal2-x-offset) + 5*var(--hex-increment));
+    transform: rotate(120deg);
+}
 
 .upper-hex1 {
     top: 0;

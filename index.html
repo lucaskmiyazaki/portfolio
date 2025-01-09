@@ -49,23 +49,21 @@
             <section id="about">
                 <div></div>
                 <div class="about-text">
-                    <h5>Mechatronics Engineer · 
-                        Designer · Computational Geometry Expert · Web Developer
-                    </h5>
                     <p>
-                        What moves me is to design technologies that augment human capabilities and defy the boundaries of what seems possible. 
-                        I graduated in mechatronics engineering from USP, interned at the University of Tokyo, 
-                        and worked on biotech companies as Galy and Tissuelabs, developing disruptive technologies.
+                        My mission as a creative technologist is to design new forms of <b>interaction between the physical and digital worlds</b>. 
+                        My main skills are:
+                        <ul>
+                            <li><b>Computational Geometry</b>: Developing algorithms and systems for digitally representing 
+                                and manipulating geometric objects to bridge physical and digital spaces.</li>
+                            <li><b>Mechatronics Engineering</b>: Designing devices that sense the physical world and provide outputs from the digital world.</li>
+                            <li><b>Material Science</b>: Testing innovative materials to create great experiences and integrate nature and technology.</li>
+                            <li><b>Human-Machine Interaction</b>: Understanding how people interact with computers, machines, and physical products.</li>
+                        </ul>
                     </p>
                     <p>
-                        I am passionate about engineering and design, I am fascinated by geometry. 
-                        Geometry is a powerful tool that enables the reconstruction of virtual models of the world. 
-                        I enjoy connecting the analogical and this digital world, creating a perception that something magical is happening.
-                        <ul>
-                            <li>We can digitally model and <b>3D print an organ</b> and save millions of lives;</li>
-                            <li>We can <b>teleport to another world</b> in virtual reality from the comfort of our homes;</li>
-                            <li>We can <b>make machines see and think</b> to create applications that make our lives easier.</li>
-                        </ul>
+                        I am currently pursuing a Master’s degree at the <b>Harvard Graduate School of Design</b> (GSD). 
+                        I hold a Bachelor's degree in Mechatronics Engineering from the <b>University of São Paulo</b> (USP), one of the top universities in Latin America.
+                        And, I have extensive experience working with computational geometry at institutions such as <b>The University of Tokyo</b> (Utokyo).
                     </p>
                     <div></div>
                     <h5>
@@ -123,10 +121,18 @@
                             <div class="sqr sqr3"></div>
                             <h6 class="hex-label">2023</h6>
                         </div>
+                        <div class="line line6"></div>
             
                         <div class="line bottom-line1"></div>
             
-                        <div class="hex bottom-hex1 selectable-hex" href="#poliModal" data-toggle="modal">
+                        <div class="hex hex7">
+                            <div class="sqr sqr1"></div>
+                            <div class="sqr sqr2"></div>
+                            <div class="sqr sqr3"></div>
+                            <h6 class="hex-label">2024</h6>
+                        </div>
+
+                        <div class="hex bottom-hex1 selectable-hex" data-toggle="modal">
                             <div class="sqr sqr1 selectable-sqr      "></div>
                             <div class="sqr sqr2 selectable-sqr      "></div>
                             <div class="sqr sqr3 selectable-sqr      "></div>
@@ -135,8 +141,17 @@
             
                         <div class="line bottom-line2"></div>
                         <div class="line bottom-line3"></div>
+
+                        <div class="hex bottom-hex2 selectable-hex" data-toggle="modal">
+                            <div class="sqr sqr1 selectable-sqr      "></div>
+                            <div class="sqr sqr2 selectable-sqr      "></div>
+                            <div class="sqr sqr3 selectable-sqr      "></div>
+                            <h6 class="hex-big-label selectable-hex-label">Harvard</h6>
+                        </div>
             
-                        <div class="hex upper-hex1 selectable-hex" href="#teethModal" data-toggle="modal">
+                        <div class="line bottom-line4"></div>
+
+                        <div class="hex upper-hex1 selectable-hex" data-toggle="modal">
                             <div class="sqr sqr1      selectable-sqr      "></div>
                             <div class="sqr sqr2      selectable-sqr      "></div>
                             <div class="sqr sqr3      selectable-sqr      "></div>
@@ -145,7 +160,7 @@
                         
                         <div class="line upper-line1"></div>
             
-                        <div class="hex upper-hex2 selectable-hex" href="#covidModal" data-toggle="modal">
+                        <div class="hex upper-hex2 selectable-hex" data-toggle="modal">
                             <div class="sqr sqr1 selectable-sqr      "></div>
                             <div class="sqr sqr2 selectable-sqr      "></div>
                             <div class="sqr sqr3 selectable-sqr      "></div>
@@ -153,7 +168,7 @@
                         </div>
                         <div class="line upper-line2"></div>
             
-                        <div class="hex upper-hex3 selectable-hex" href="#tissuelabsModal" data-toggle="modal">
+                        <div class="hex upper-hex3 selectable-hex" data-toggle="modal">
                             <div class="sqr sqr1     selectable-sqr      "></div>
                             <div class="sqr sqr2     selectable-sqr      "></div>
                             <div class="sqr sqr3     selectable-sqr      "></div>
@@ -163,7 +178,7 @@
                         <div class="line upper-line4"></div>
                         <div class="line upper-line5"></div>
             
-                        <div class="hex upper-hex4 selectable-hex" href="#galyModal" data-toggle="modal">
+                        <div class="hex upper-hex4 selectable-hex" data-toggle="modal">
                             <div class="sqr sqr1 selectable-sqr      "></div>
                             <div class="sqr sqr2 selectable-sqr      "></div>
                             <div class="sqr sqr3 selectable-sqr      "></div>
@@ -173,81 +188,39 @@
                         <div class="line upper-line7"></div>
                     </div>
 
-                    <div></div>
-                    <h5>
-                        skills
-                    </h5>
-                    <div class="skills-table">
-                        <div>
-                            <h5 onclick="showMore('geo')" class="skill-title">Computational geometry</h5>
-                            <p class="skill-title" onclick="showMore('geo')">
-                                Ability to virtually recreate our world with numbers and bits and to turn bits into tangible things:
-                            </p>
-                                <ul id="skill-geo" class="skill-text" onclick="showMore('geo')">
-                                    <li>experience with scanning methods (such as photogrammetry, interferometry, and depth cameras);</li>
-                                    <li>expertise in 2D/3D data processing (such as segmentation algorithms, mesh reconstruction, ICP, etc.);</li>
-                                    <li>skills to develop my own CAD/CAM (using Threejs or C++);</li>
-                                    <li>knowledge in with gcode and slicing (for 3D printers) and motion planning algorithms;</li>
-                                    <li>familiarity with VR apps/videos development (Unity, threejs, 360 cameras);</li>
-                                    <li>capacity to develop machine learning models, especially for computer vision (such as object classification and OCR).</li>
-                                </ul>
-                            <h5 onclick="showMore('geo')" id="arrow-geo" class="skill-arrow">&#65088;</h5>
-                        </div>
-                        
-                        <div>
-                            <h5 onclick="showMore('soft')" class="skill-title">Software Development</h5>
-                            <p class="skill-title" onclick="showMore('soft')">
-                                Capacity to transform my ideas into virtual products:
-                            </p>
-                            <ul id="skill-soft" class="skill-text" onclick="showMore('soft')">
-                                <li>vast experience in Python, C, C++, C#, Ruby and JS and ease of learning new languages;</li>
-                                <li>ability to design beautiful frontend apps (with HTML, CSS, React, Bootstrap, Javascript, Threejs);</li>
-                                <li>backend framework (such as Rails, Flask, Node) and database (SQL) skills;</li>
-                                <li>ability to run my app in cloud platforms (AWS and google cloud) and set up the cloud environment (with Docker or VM);</li>
-                                <li>capacity to develop computer apps and put in production (WinForms, Unity, pyinstaller, Inno Setup);</li>
-                                <li>experience in developing programs collaboratively (Git, GitHub, Google Collab, VScode Live Share).</li>
-                            </ul>
-                            <h5 onclick="showMore('soft')" id="arrow-soft" class="skill-arrow">&#65088;</h5>
-                        </div>
-                        <div>
-                            <h5 onclick="showMore('mech')" class="skill-title">mechanical design and manufacturing</h5>
-                            <p class="skill-title" onclick="showMore('mech')">
-                                Capacity to turn my ideas into tangible products:
-                            </p>
-                            <ul id="skill-mech" class="skill-text" onclick="showMore('mech')">
-                                <li>skilled in CAD/CAM software (such as Fusion360 and Openscad) and 
-                                capable of combining techniques (scanning, coding, modeling) to create organic complex shapes; </li> 
-                                <li>experienced in prototyping using 3D printers (FDM and SLA);</li>
-                                <li>familiar with manufacturing techniques (molding and casting, laser cut, CNC machine);</li>
-                                <li>knowledgeable about developing precise machine for sterile environments.</li>
-                            </ul>
-                            <h5 onclick="showMore('mech')" id="arrow-mech" class="skill-arrow">&#65088;</h5>
-                        </div>
-                        <div>
-                            <h5 onclick="showMore('control')" class="skill-title">actuators, sensors & control systems</h5>
-                            <p class="skill-title" onclick="showMore('control')">
-                                Ability to make machines move, sense, and respond in the cheapest and most optimized way:
-                            </p>
-                            <ul id="skill-control" class="skill-text" onclick="showMore('control')">
-                                <li>capacity to design electromechanical devices, pneumatic systems and other fluidic circuits; </li> 
-                                <li>knowledge in electronics such as prototyping platforms (Arduino, RaspPi) and PCB design and fabrication; </li> 
-                                <li>strong theoretical system control knowledge; </li> 
-                                <li>experience working with a wide variety of sensors and actuators. </li> 
-                            </ul>
-                            <h5 onclick="showMore('control')" id="arrow-control" class="skill-arrow">&#65088;</h5>
-                        </div>
-                    </div>
+                    
                     
                 </div>
             </section>
             <section id="projects">
+                <div class="proj-btn" href="#relevoModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/relevo.gif"> 
+                    <div class="img-cover cover1 reversed-cover">
+                        <h2 class="img-title">relevo - Softrobotics</h2>
+                        <p class="img-description">
+                            After knee surgery, more than 30% of the patients loose leg mobility due to lack of support...
+                        </p>
+                    </div>
+                </div>
+                <div class="proj-btn" href="#glowModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/dino.gif"> 
+                    <div class="img-cover cover1 cover">
+                        <h2 class="img-title">DINO - biodigital display</h2>
+                        <p class="img-description">
+                            Can human creations and nature live in harmony?
+                        </p>
+                    </div>
+                </div>
+                <div class="blank-proj cover1"></div>
+
+                <div class="blank-proj cover2"></div>
                 <div class="proj-btn" href="#chipModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/chip.gif"> 
-                    <div class="img-cover cover1 reversed-cover">
+                    <div class="img-cover cover2 cover">
                         <h2 class="img-title">organ-on-a-chip</h2>
                         <p class="img-description">
-                            Striving to manufacture the <b>first artificial transplantable heart</b>, 
-                            we created state-of–the-art organ-on-a-chip models that simulates the physiology and mechanics of real organs... 
+                            To manufacture the first artificial transplantable heart, 
+                            I designed and tested <b>more than 50 different organ models</b>... 
                         </p>
                     </div>
                 </div>
@@ -255,82 +228,84 @@
                 
                 <div class="proj-btn" href="#bioreactorModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/bioreactor.gif"> 
-                    <div class="img-cover cover1">
+                    <div class="img-cover cover2">
                         <h2 class="img-title">bioreactors</h2>
                         <p class="img-description">
-                            The material used for bioprints are called <b>bioinks </b>- 
-                            an extracellular matrix extracted from animal and vegetal sources. 
-                            I developed two low-cost bioreactors used in the bioink production process...
-                        </p>
-                    </div>
-                </div>
-                <div class="proj-btn" href="#loggerModal" data-toggle="modal">
-                    <img class="proj-img bright-img" src="img/thumb/sensores.jpg"> 
-                    <div class="img-cover cover1">
-                        <h2 class="img-title">data logger</h2>
-                        <p class="img-description">
-                            Data logger is a device that monitors and saves data from a certain environment/machine.
-                            I developed a data logger that transmitted data from a low-cost bioreactor to the cloud... 
-                        </p>
-                    </div>
-                </div>
-                <div class="proj-btn" href="#cadModal" data-toggle="modal">
-                    <img class="proj-img" src="img/thumb/soft.gif"> 
-                    <div class="img-cover cover1">
-                        <h2 class="img-title">3D printers</h2>
-                        <h2 class="img-title">custom cad/cam</h2>
-                        <p class="img-description">
-                            To create complex shapes such as organ-on-a-chip, we need special 3D printers called bioprinters. 
-                            We designed and built <b>TissueStart</b> (an extrusion printer) and <b>TissueRay</b> (stereolithography printer).
-                            I had a key role to develop a CAM/CAM to interact with the printers and create organ-on-a-chip models... 
-                        </p>
-                    </div>
-                </div>
-                <div class="blank-proj cover1 blank1"><h4>we can make organs</h4></div>
-                <div class="blank-proj cover1"></div>
-
-                <div class="blank-proj cover2"></div>
-                <div class="blank-proj cover2 blank2"><h4 class="align-left">we can go to another reality</h4></div>
-                <div class="proj-btn" href="#vrModal" data-toggle="modal">
-                    <img class="proj-img bright-img" src="img/thumb/chapada.JPG"> 
-                    <div class="img-cover cover2">
-                        <h2 class="img-title">VR video</h2>
-                        <p class="img-description">
-                            To convince people to become susteinable, 
-                            we filmed a virtual reality documentary in the 
-                            Chapada dos Guimarães national park to <b>teleport</b> them 
-                            to one of the most targeted <b>deforestation spot</b> in Brazil.
-                            The video was published on Forbes...
-                        </p>
-                    </div>
-                </div>
-
-                <div class="blank-proj cover2"></div>
-                <div class="proj-btn" href="#wheelsModal" data-toggle="modal">
-                    <img class="proj-img" src="img/thumb/wheels.gif"> 
-                    <div class="img-cover cover2">
-                        <h2 class="img-title">VR Game</h2>
-                        <p class="img-description">
-                            This toy project is a shooter game on a wheel chair where the player has to hit enemies with a dodgeball.
-                        </p>
-                    </div>
-                </div>
-                <div class="proj-btn" href="#fiberModal" data-toggle="modal">
-                    <img class="proj-img" src="img/thumb/fibers.png"> 
-                    <div class="img-cover cover2">
-                        <h2 class="img-title">cell analysis</h2>
-                        <p class="img-description">
-                            I proposed to 3D scan the cells to help in the cell analysis.
-                            I developed a VR app to visualize and annotate the 3D cell models. 
-                            The app shrunk the scientists to a cell size and <b>transported people to the microscopic world</b>... 
+                            The material used for bioprints are called bioinks- 
+                            an extracellular matrix made with <b>bioreactors</b>... 
                         </p>
                     </div>
                 </div>
                 
+                <div class="proj-btn" href="#cadModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/soft.gif"> 
+                    <div class="img-cover cover2">
+                        <h2 class="img-title">3D printers</h2>
+                        <h2 class="img-title">custom cad/cam</h2>
+                        <p class="img-description">
+                            I had a key role to develop a CAM/CAM to interact with bioprinters and create organ-on-a-chip models... 
+                        </p>
+                    </div>
+                </div>
+                <div class="blank-proj cover2 blank2"><h4>we can make organs</h4></div>
+                <div class="blank-proj cover2"></div>
+
+                
+
                 <div class="blank-proj cover3"></div>
+                <div class="blank-proj cover3 blank2"><h4 class="align-left">we can go to another reality</h4></div>
+                <div class="proj-btn" href="#vrModal" data-toggle="modal">
+                    <img class="proj-img bright-img" src="img/thumb/chapada.JPG"> 
+                    <div class="img-cover cover3">
+                        <h2 class="img-title">Cotton vs Nature - VR documentary</h2>
+                        <p class="img-description">
+                            To convince people to become sustainable, 
+                            we filmed a virtual reality documentary.
+                            The video was published on Forbes...
+                        </p>
+                    </div>
+                </div>
+                <div class="blank-proj cover3"></div>
+
+                <div class="proj-btn" href="#arModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/ar.gif"> 
+                    <div class="img-cover cover3">
+                        <h2 class="img-title">AR Museum - Preserving Indigenous Memories</h2>
+                        <p class="img-description">
+                            Indigenous culture in Brazil heavily rely on
+                            natural elements that are being affected by deforestation...
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="proj-btn" href="#fiberModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/fibers.png"> 
+                    <div class="img-cover cover3">
+                        <h2 class="img-title">VR cell analysis</h2>
+                        <p class="img-description">
+                            I proposed to 3D scan the cells and developed a VR app to analyse them... 
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="proj-btn" href="#wheelsModal" data-toggle="modal">
+                    <img class="proj-img" src="img/thumb/wheels.gif"> 
+                    <div class="img-cover cover3">
+                        <h2 class="img-title">On Wheels - Virtual Reality Game</h2>
+                        <p class="img-description">
+                            An easy-to-play VR game.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="blank-proj cover3"></div>
+                <div class="blank-proj cover3"></div>
+
+                
+                <div class="blank-proj cover4"></div>
                 <div class="proj-btn" href="#tccModal" data-toggle="modal">
                     <img class="proj-img bright-img" src="img/thumb/tcc1.gif"> 
-                    <div class="img-cover cover3">
+                    <div class="img-cover cover4">
                         <h2 class="img-title">AI</h2>
                         <h2 class="img-title">cashier</h2>
                         <p class="img-description">
@@ -341,7 +316,7 @@
                 </div>
                 <div class="proj-btn" href="#teethModal" data-toggle="modal">
                     <img class="proj-img bright-img" src="img/thumb/teeth.gif"> 
-                    <div class="img-cover cover3">
+                    <div class="img-cover cover4">
                         <h2 class="img-title">teeth scan and</h2>
                         <h2 class="img-title">Segmentation</h2>
                         <p class="img-description">
@@ -353,7 +328,7 @@
                 </div>
                 <div class="proj-btn" href="#mugModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/caneca.gif"> 
-                    <div class="img-cover cover3">
+                    <div class="img-cover cover4">
                         <h2 class="img-title">hand mug</h2>
                         <p class="img-description">
                             The Hand Mug was a free time side project I developed using scanners and 3D printers...
@@ -361,10 +336,10 @@
                     </div>
                 </div>
 
-                <div class="blank-proj cover3 blank2"><h4 class="align-left">we can make machines see/think</h4></div>
+                <div class="blank-proj cover4 blank2"><h4 class="align-left">we can make machines see/think</h4></div>
                 <div class="proj-btn" href="#covidModal" data-toggle="modal">
                     <img class="proj-img bright-img" src="img/thumb/hackaton.png"> 
-                    <div class="img-cover cover3">
+                    <div class="img-cover cover4">
                         <h2 class="img-title">covid map</h2>
                         <p class="img-description">
                             In 2020, our team won Visagio’s Hackathon (COVID19 edition). 
@@ -375,13 +350,13 @@
 
                 <div class="proj-btn" href="#socialModal" data-toggle="modal">
                     <img class="proj-img" src="img/thumb/enactus.gif"> 
-                    <div class="img-cover cover4">
+                    <div class="img-cover cover5">
                         <h2 class="img-title">social projects</h2>
                         <h2 class="img-title">& volunteering</h2>
                     </div>
                 </div>
-                <div class="blank-proj cover4 blank3"><h4>other projects</h4></div>
-                <div class="blank-proj cover4"></div>
+                <div class="blank-proj cover5 blank3"><h4>other projects</h4></div>
+                <div class="blank-proj cover5"></div>
                 
             </section>
             <section id="contact">
@@ -460,6 +435,133 @@
             </div>
         </div>
 
+        <div class="modal fade" id="relevoModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Soft Robotics in Knee Surgery Recovery</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modal-body proj-description">
+                        <div class="modal-grid">
+                            <div>
+                                <p>
+                                    <b>The Problem</b>
+                                </p>
+                                <div></div>
+                                <ul>
+                                    <li>
+                                        More than 30% of the patients loose leg mobility.
+                                    </li>
+                                    <li>
+                                        1/4 of the patients neglect physiotherapy due to lack of support.
+                                    </li>
+                                    <li>
+                                        Existing technologies for physiotherapy are heavy, expensive, and not proper for domestic use.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <img class="img-modal" src="img/058-relevo.jpg">
+
+                            <p><b>Motion study of the physiotherapy exercise:</b></p>
+                            <img class="img-modal" src="img/067-relevo.gif">
+
+                            <div>
+                                <img class="img-modal" src="img/059-relevo.jpg">
+                            </div>
+
+                            <div>
+                                <p>
+                                    <b>The Solution</b>
+                                </p>
+                                <div></div>
+                                <ul>
+                                    <li>
+                                        User-friendly and lightweight soft robotics.
+                                    </li>
+                                    <li>
+                                        A triangular cushion to perform a macromovement to exercise the leg.
+                                    </li>
+                                    <li>
+                                        A leg brace to perform a micromovent to prevent blood clots.
+                                    </li>
+                                    <li>
+                                        Flex sensor and EMG sensors to track progress and enable remote guidance from health professional.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <img class="img-modal" src="img/057-relevo.png">
+                        <img class="img-modal" src="img/060-relevo.gif">
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/065-relevo.gif">
+                            <img class="img-modal" src="img/064-relevo.gif">
+                            <img class="img-modal" src="img/062-relevo.jpg">
+                            <img class="img-modal" src="img/061-relevo.gif">
+                            <img class="img-modal" src="img/066-relevo.jpg">
+                            <img class="img-modal" src="img/063-relevo.JPG">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="glowModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">DINO - Bio-digital Display</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body proj-description">
+                        <div class="modal-grid">
+                            <div>
+                                <p>
+                                    <b>Can human creations and nature live in harmony?</b>
+                                </p>
+                                <p>
+                                    In the future, the boundaries between artificial devices and nature will disappear as we increasingly 
+                                    integrate biomaterials into our designs, creating systems that are not only functional but alive, regenerative, 
+                                    and sustainable. 
+                                </p>
+                                <p>
+                                    Excited about this utopia, I decided to explore <b>dinoflagellates</b> glowing properties to create a digital display, 
+                                    DINO (Digital Interface with Natural Organisms):
+                                </p>
+                                <p>
+                                    <b>
+                                        Luciferin + Luciferase + O2 -> Oxyluciferin
+                                    </b>
+                                </p>
+                                <p>Oxyluciferin decays and emit light. </p>
+                            </div>
+                            <img class="img-modal" src="img/076-glow.jpg">
+                        </div>
+                        <img class="img-modal" src="img/069-glow.png">
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/070-glow.gif">
+                            <img class="img-modal" src="img/071-glow.gif">
+                        </div>
+                        <img class="img-modal" src="img/072-glow.JPG">
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/073-glow.png">
+                            <img class="img-modal" src="img/074-glow.gif">
+                        </div>
+                        <img class="img-modal" src="img/075-glow.png">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <div class="modal fade" id="chipModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -470,65 +572,46 @@
                         </button>
                     </div>
                     <div class="modal-body proj-description">
-                     
                       
-                      <div class="modal-grid">
-                          <img class="img-modal" src="img/015-chip.gif">
-                          <p>
-                            Striving to manufacture the first <b>artificial transplantable heart</b>, 
-                            we created state-of–the-art organ-on-a-chip models that simulates the physiology and mechanics of real organs. 
-                            I had the initiative of start developing these models at TissueLabs. 
-                            I designed and tested more than 50 different organ models.
-                            
-                            <a href="https://www.youtube.com/watch?v=-xNT_aEYsuQ">Tissuelabs' video</a>
-                            shows some of these models.
-                          </p>
-                          <div>
-
-                            <p>
-                                The model has a 3D microfluidic circuit integrated with a cell culture. 
-                                Each channel can simulate blood vessels and other parts of the human body.
-                                I created the models based on organs and tissues from the human body 
-                                using Fusion360 and scanning techniques to create the organic shapes. For example:
-                            </p>
-                            <ul>
-                              <li>
-                                  The intestine chip is a rugose duct (where digested food pass) wrapped by coil-shaped blood vessel. 
-                                </li>
-                                <li>
-                                    The alveoli chip is an air sac wrapped by a dodecahedronal 
-                                    network of blood vessels. 
-                                </li>
-                            </ul>
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/015-1-chip.png">
+                            <div>
+                                <p>
+                                    To manufacture the first artificial transplantable heart, 
+                                    I designed and tested <b>more than 50 different organ models</b> that simulate the physiology and mechanics of real organs, 
+                                    such as:
+                                </p>
+                                <ul>
+                                    <li>Kidney</li>
+                                    <li>Intestine</li>
+                                    <li>Alveoli</li>
+                                </ul> 
+                                <p>
+                                    I also researched <b>new fabrication methods</b> to create microfluidic chips.
+                                    <a href="https://www.youtube.com/watch?v=-xNT_aEYsuQ">Tissuelabs' video</a>
+                                    shows some of the organ-on-a-chip I developed.
+                                </p>
                             </div>
-                          <img class="img-modal" src="img/027-chip.jpeg">
-                          <img class="img-modal" src="img/017-tissueray.gif">
-                          <div>
-                            <p>
-                              I applied two different methods to manufacture the models. 
-                            </p>
+
+                            <img class="img-modal" src="img/015-chip.gif">
+                            <img class="img-modal" src="img/027-chip.jpeg">
+
+                            <img class="img-modal" src="img/017-tissueray.gif">
                             <ul>
                                 <li>
                                     <b>Stereolithography</b>: 
-                                    I used photosensitive resin and TissueRay to create complex shapes such as microfluidic systems. 
-                                    TissueRay is a bioprinter that has a LCD screen and a raising platform. This printer was designed at TissueLabs and built by me.
-                                    I tested different parameters and shapes to ensure the organoids were properly working.
-                                    I first tested the models with flexible resin and then with bioinks.
+                                    A photosensitive bio-resin and a special light frequency 3D printer.
+                                </li>
+                            </ul>
+
+                            <img class="img-modal" src="img/thumb/mould.gif">
+                            <ul>
+                                <li>
+                                    <b>Coagulation bath</b>: 
+                                    A mould filled with a solidifying material and a multi-material 3D printer.
                                 </li>
                             </ul>
                         </div>
-                        <img class="img-modal" src="img/thumb/mould.gif">
-                         <ul>
-                            <li>
-                                <b>Coagulation bath</b>: 
-                                I proposed this method as stereolithography cannot produce multiple-material objects.
-                                I made a mold and printed with TissueStart the channels in the mold in a solidifying matrix.
-                                The mold enables the production of complex surface shapes.
-                                And, the extrusion printer can create complex vessel shapes and objects with multiple materials.
-                            </li>
-                         </ul>
-                        </div>
-                        <br>
                         <img src="img/mold.jpg">
                     </div>
                 </div>
@@ -545,34 +628,46 @@
                         </button>
                     </div>
                     <div class="modal-body proj-description">
+                        <p>
+                            I was responsible for developing the web CAD/CAM to interact with 3D bioprinters. 
+                            My software was the primary way users interacted with TissueStart.
+                            The software was developed using ThreeJS and was hosted on the cloud. 
+                        </p>
+                        <p>
+                            <b>User Requirements:</b>
+                        </p>
+                        <ul>
+                            <li>Plug-and-play and intuitive printers.</li>
+                            <li>Enable modifications without interrupting the job.</li>
+                            <li>Enable multi-material prints.</li>
+                            <li>Easy-to-use 3D modeling function.</li>
+                        </ul>
                       <div class="modal-grid">
-                        <div>
-                        <p>
-                            To create complex shapes such as organ-on-a-chip, we need special 3D printers called bioprinters. 
-                            We designed and built <b>TissueStart</b> (an extrusion printer) and <b>TissueRay</b> (stereolithography printer).
-                            Besides helping with the mechanical design, 
-                            I had a key role to develop a CAM/CAM to interact with the printers and create organ-on-a-chip models. 
-                        </p>
-                        <p>
-                            The software was developed using Javascript and was hosted on the cloud, 
-                            eliminating the need to install a software and solving compatibility problems. 
-                        </p>
-                        </div>
-                        <img class="img-modal" src="img/028-software.gif">
+                        
+                        <img class="img-modal" src="img/023-software.gif">
                         <img class="img-modal" src="img/024-bioprint.gif">
                         <p>
-                            The <b>CAM software</b> has integration with <b>slic3r</b> and with the <b>3D printer</b>. The user can convert different format 3D models - 
-                            stl, obj, ply, etc - into gcode. 
-                            The custom CAM enables: the slicing of complex shapes with multiple materials, 
-                            the control and calibration of the printer, 
-                            real time adjustments during the printing process, and the use of the printer as an automatic pipette.
+                            Real-time adjustments during printing process, and easy control and calibration of the printer.
                         </p>
                         <p>
-                            The software has an <b>easy-to-use CAD tool</b> that creates complex <b>3D organ-on-a-chip</b> models from a simple <b>2D drawing</b>.
-                          The CAD consisted in 2 simple tools: The first tool can draw the object contour. The second tool draws the vessels' path.
-                          The software extrudes the shape formed by the contour and creates channels based on the vessel's path.
+                            Slicing of complex shapes with multiple materials
                         </p>
+
+                        <img class="img-modal" src="img/022-pipette.gif">
                         <img class="img-modal" src="img/cad.png">
+
+                        <p>
+                            Use of the printer as a pipette machine.
+                        </p>
+                        <p>
+                            An easy-to-use <b>CAD</b> tool 
+                            that creates complex 3D organ-on-a-chip models from a simple 2D drawing.
+                        </p>
+                        <img class="img-modal" src="img/029-software.gif">
+                        <div></div>
+                        <p>
+                            A Wizard Mode to make the 3D printer extremely fast to learn.
+                        </p>
                         </div>
                     </div>
                 </div>
@@ -589,47 +684,95 @@
                         </button>
                     </div>
                     <div class="modal-body proj-description">
-                      <div class="modal-grid">
-                        <div>
-                            <p>
-                                The material used for bioprints are called <b>bioinks </b>- 
-                                an extracellular matrix extracted from animal and vegetal sources. 
-                                I developed two low-cost bioreactors used in the bioink production process:
-                            </p>
-                            <ul>
-                                <li>
-                                    <b>Bioreaquel</b> can mix animal tissue with decellularizing substances.
-                                    The machine has two separate parts: 
-                                    the removable module made of PLA where the electric motor and all the electronics is; 
-                                    and the autoclavable jacketed flask whose lid is made of autoclavable resin, sealed with a rubber ring, 
-                                    and has grooves to attach the upper module.
-                                </li>
-                                <li>
-                                    <b>BioWash</b> can wash organic mass. 
-                                    The machine has a magnetic stirrer (powered by an electric motor) 
-                                    and a jar with an input and an output hose. A pump is connected to the output and ionized water is sucked from the input. 
-                                    The bottle cap that sealed each bottle is made of autoclavable material and prevents from external contamination. 
-                                    An arduino controlled the washing cycles by controlling the flow of water.
-                                </li>
-                            </ul>
-                            </div>
-                            <img class="img-modal" src="img/bioreactor.JPG">
-                            <div>
-                                <img class="img-modal" src="img/021-bioreactor.gif">
-                                <img class="img-modal" src="img/018-premio.gif">
-                            </div>
-                            <div>
-                            <p>
-                                I was also responsible for fixing lab equipment such as bag sealers, magnetic stirrers, bioreactors, autoclaves, 
-                                3D printers, and centrifuges.
-                            </p>
-                            <p>
-                                As a recognition for my proactivity and efficiency building and fixing equipment, 
-                                I won the congeniality and achiever prize at the Q3 of 2021.
-                            </p>
-                            </div>
+                        <p>
+                            The material used for bioprints are called <b>bioinks </b>- 
+                            an extracellular matrix made with bioreactors.
+                        </p>
+                        <p>
+                            <b>Bioreaquel</b> - User Requirements 
+                        </p>
+                        <ul>
+                            <li>
+                                A bioreactor that could 
+                                mix animal tissue with decellularizing substances.
+                            </li>
+                            <li>
+                                A temperature controlled environment. 
+                            </li>
+                            <li>
+                                Easy to clean. 
+                            </li>
+                        </ul>
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/021-1-bioreactor.png">
+                            <img class="img-modal" src="img/021-3-bioreactor.JPG">
+                        </div>
+
+                        <p>
+                            <b>Biowash</b> - User Requirements 
+                        </p>
+                        <ul>
+                            <li>
+                                A bioreactor that washes organic mass.
+                            </li>
+                            <li>
+                                A system to easily switch bottles inside the flow hood. 
+                            </li>
+                            <li>
+                                Prevent contamination. 
+                            </li>
+                        </ul>
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/021-2-bioreactor.png">
+                            <img class="img-modal" src="img/021-bioreactor.gif">
+                        </div>
                         
-                    </div>
+                        <p>
+                            <b>Datalogger</b> - User Requirements 
+                        </p>
+                        <ul>
+                            <li>
+                                A low-cost, automatic, and safe method to collect data from bioreactors.
+                            </li>
+                            <li>
+                                Periodically collect temperature, pH, and DO information. 
+                            </li>
+                            <li>
+                                An easy way to set up and analyse data. 
+                            </li>
+                        </ul>
+                        <div>
+                            <p><b>The circuit</b> that transmit data to the cloud:</p>
+                        </div>
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/030-sensores.jpg">
+                            <img class="img-modal" src="img/031-1-sensores.png">
+                        </div>
+
+                            <div>
+                                <p><b>The webpage</b> to visualize dashboards and download the data and</p>
+                                <p><b>The mobile portal</b> to calibrate and set up the device:</p>
+                            </div>
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/031-sensores.png">
+                            <img class="img-modal" src="img/031-2-sensores.gif">
+                        </div>
+
+                        <p><b>Recognition</b></p>
+
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/018-premio.gif">
+                            <div>
+                                <p>
+                                    I was also responsible for fixing lab equipment such as bag sealers, magnetic stirrers, bioreactors, autoclaves, 
+                                    3D printers, and centrifuges.
+                                </p>
+                                <p>
+                                    As a recognition for my proactivity and efficiency building and fixing equipment, 
+                                    I won the congeniality and achiever prize at the Q3 of 2021.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -673,51 +816,98 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title fs-5">VR video</h5>
+                        <h5 class="modal-title fs-5">Cotton vs Nature - VR documentary</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body proj-description">
-                      <div class="modal-grid">
-                        <div>
-                      <p>
-                        Every year, millions of acres of <b>forests are lost</b> to agriculture. 
-                        This widespread destruction not only contributes to a decline in natural diversity, 
-                        but also to a drastic <b>climate change</b>. 
-                        At Galy, we try to replace extensive land use for producing commodities on large scale 
-                        within a compact factory through cellular agriculture.
-                      </p>
-                      <p>
-                        To convince investors to join the cause, 
-                        we filmed a virtual reality documentary in the 
-                        Chapada dos Guimarães national park to <b>teleport</b> them 
-                        to one of the most targeted <b>deforestation spot</b> in Brazil.
-                    </p>
-                    <p> 
-                        During a family trip, when I travelled to Chapada dos Guimarães - 
-                        a place with a stunning landscape, I saw the natural beauty being swallowed by farms. 
-                        That endless green desert filled with cotton was truly scary. So, 
-                        I had the idea to go back there to share this personal experience to <b>emotionally touch the investors</b>. 
-                    </p>
-                    <p>
-                        From this idea, I wrote the plot, took care of the logistics, found relevant interviewees, rented proper equipment for the desired shots,
-                        and lead a filming team of 4 people in Brazil. 
-                        We used Insta 360 Pro II, a <b>stereoscopic 360 camera</b> that creates an extremely immersive experience. 
-                        The video creates an intimate relationship between the viewer and locals from Chapadas 
-                        and makes us feel the pain for seeing all the devastation in the middle of that beautiful landscape. 
-                        The video had such an impact on investors that, later, 
-                        <a href="https://www.forbes.com/sites/jeffkart/2023/07/08/lab-grown-cotton-enters-the-market-with-galy-suzuran-partnership/?sh=63d9c7b81c9f">Forbes</a>
-                        published the video.
-                      </p>
-                    </div>
-                    <div>
-                          <img class="img-modal" src="img/043-chapada.jpg">
-                          <img class="img-modal" src="img/046-chapada.JPG">
-                          <img class="img-modal" src="img/038-chapada.gif">
+                        <div class="modal-grid">
+                            <div>
+                                <p><b>The Problem</b></p>
+                                <p>
+                                    Every year, millions of acres of forests are lost to agriculture, contributing to climate change.
+                                    People are not aware of this impact.
+                                </p>
+                            </div>
+                            <img class="img-modal" src="img/046-chapada.JPG">
+                            <div>
+                                <p><b>The Solution</b></p>
+                                <p>
+                                    I produced a virtual reality documentary in the 
+                                    Chapada dos Guimarães national park to <b>teleport</b> investors 
+                                    to one of the most targeted <b>deforestation spots</b> in Brazil
+                                    and convince them to support cell agriculture research.
+                                </p>
+                            </div>
+                            <img class="img-modal" src="img/038-chapada.gif">
+                        </div>
+                        <img class="img-modal" src="img/038-1-chapada.png">
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/043-chapada.jpg">
+                            <p> 
+                                During a family trip to Chapada dos Guimarães, I saw the natural beauty being swallowed by farms. 
+                                That endless green desert filled with cotton was truly scary. So, 
+                                I had the idea to go back there to share this personal experience to <b>emotionally touch the investors</b>. 
+                                We used Insta 360 Pro II, a <b>stereoscopic 360 camera</b> that creates an extremely immersive experience. 
+                                The video had such an impact on investors that, later, 
+                                <a href="https://www.forbes.com/sites/jeffkart/2023/07/08/lab-grown-cotton-enters-the-market-with-galy-suzuran-partnership/?sh=63d9c7b81c9f">Forbes</a>
+                                published the video.
+                            </p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
 
+        <div class="modal fade" id="arModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">AR Museum - Preserving Indigenous Memories</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body proj-description">
+                        <div class="modal-grid">
+                            <img class="img-modal" src="img/080-tupi.gif">
+                            <div>
+                                <p>
+                                    <b>The Problem</b>
+                                </p>
+                                <p>
+                                    Indigenous culture in Brazil, such as the Tukanos and Tupis', heavily rely on
+                                    natural elements for its preservation. 
+                                    These tribes use rivers, caves, and forests to tell stories.
+                                    These sacred places are being affected by deforestation.
+                                </p>
+    
+                            </div>
+                        </div>
+                        
+                        <img class="img-modal" src="img/077-tupi.gif">
+                        <div class="modal-grid">
+                            <div>
+                                <img class="img-modal" src="img/078-tupi.gif">
+                                <img class="img-modal" src="img/079-tupi.gif">
+                            </div>
+                            <div>
+                                <p>
+                                    <b>The Solution</b>
+                                </p>
+                                <p>
+                                    I curated and web-scraped over 2,000 entries of indigenous stories, legends, rituals, and traditions. 
+                                    Using generative AI, I visualized these stories through compelling imagery and organized them into thematic clusters. 
+                                    To preserve and celebrate these narratives, 
+                                    I developed an app that transforms the world into a living museum. 
+                                    Through its augmented reality feature, users can experience these stories in their natural environments, 
+                                    fostering interaction with the cultural context without displacing artifacts from their original locations.
+
+                                </p>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -727,20 +917,33 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title fs-5">Virtual Reality Game - On Wheels</h5>
+                        <h5 class="modal-title fs-5">On Wheels - Virtual Reality Game</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body proj-description">
-                        <p>
-                            This toy project is a shooter game on a wheelchair where the player has to hit enemies with a dodgeball.
-                            The game can be found on <a href="https://github.com/lucaskmiyazaki/on_wheels">GitHub</a>.
-                        </p>
                         <div class="modal-grid">
+                            <div>
+                                <p><b>The Problem</b></p>
+                                <p>
+                                    Most VR games require the player to stand in a wide space, 
+                                    limiting the playability for people with low mobility or who live in small apartments.
+                                </p>
+                                <img class="img-modal" src="img/056-wheels.png">
+                            </div>
+                            <img class="img-modal" src="img/056-1-wheels.gif">
                             <img class="img-modal" src="img/055-wheels.png">
-                            <img class="img-modal" src="img/056-wheels.png">
-                      </div>
+
+                            <div>
+                                <p><b>The Solution</b></p>
+                                <p>
+                                    I developed a game that could be played while seated on a chair.
+                                    This project is a shooter game on a wheelchair where the player has to hit enemies with a dodgeball.
+                                    The game can be found on <a href="https://github.com/lucaskmiyazaki/on_wheels">GitHub</a>.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -750,24 +953,24 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title fs-5">Cell analysis</h5>
+                        <h5 class="modal-title fs-5">VR Cell analysis</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body proj-description">
-                      <p>
-                        One of the problems the scientists were facing at Galy was to analyse the cotton fibers. 
-                        They could not measure the cells that were entangling around each other. 
-                        A 2D image was not able to analyse overlapping cells and traditional measuring methods would break the artificially elongated cells. 
-                        
-                      </p>
-                      <p>
-                        I proposed to 3D scan the cells. Besides the scan method, 
-                        I developed a VR app to visualize and annotate the 3D cell models. 
-                        The app shrunk the scientists to a cell size and <b>transported people to the microscopic world</b>. 
-                        The app enabled the fiber analysis from a close distance. 
-                      </p>
+                        <p><b>The Problem</b></p>
+                        <p>
+                            The scientists <b>could not measure the cells</b> that were entangling around each other. 
+                            A 2D image was not able to analyse overlapping cells and traditional measuring methods would break the artificially elongated cells. 
+                        </p>
+
+                        <p><b>The Solution</b></p>
+                        <p>
+                            I developed a cell 3D scan method, a VR app to visualize and annotate the 3D cell models. 
+                            The app shrunk the scientists to a cell size and <b>transported people to the microscopic world</b>. 
+                            The app enabled the fiber analysis from a close distance. 
+                        </p>
                       <br>
                       <div class="modal-grid">
                         <div>
@@ -815,10 +1018,7 @@
                     </div>
                     <div class="modal-body proj-description">
                         <p>
-                            Data logger is a device that monitors and saves data from a certain environment/machine.
-                            I developed a data logger that transmitted data from a low-cost bioreactor to the cloud. 
-                        </p>
-                        <p>
+                            I developed a data logger that transmitted data from a low-cost bioreactor to the cloud.
                             The data logger used a ESP8266, a thermocouple, a ph meter, and a DO sensor. 
                             The user could configure and calibrate the sensors through a mobile portal and 
                             check the data via a dashboard on the website.
@@ -1021,6 +1221,40 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title fs-5">Bsc Mechatronics Engineering - USP</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body proj-description">
+                      <div class="modal-grid">
+                        <div>
+                      <p>
+                        The Bsc in Engineering at USP is a highly competitive course to enter in Brazil.
+                        USP is #85 in QS world ranking and #1 in the country. 
+                        <a href="https://bv.fapesp.br/pt/pesquisador/698297/lucas-kyoshi-miyazaki/">FAPESP</a> granted me a
+                        scholarship. FAPESP only rewards scholarships to top students.
+                    </p>
+                    <p>
+                        The Mechatronics engineering course provides a strong knowledge base in mechanical, 
+                        control, electronical, and software engineering. 
+                        The Mechatronics engineering student participates on many machine design, robot development, and industry automation projects. 
+                        Besides the regular curriculum, I enrolled in classes related to product design, 
+                        material science, integrated circuit design, precision engineering, AI/machine learning, and linear optimization.
+                      </p>
+                    </div>
+
+                          <img class="img-modal" src="img/usp.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="harvardModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-5">Master in Design Engineering - Harvard</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

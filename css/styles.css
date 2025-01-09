@@ -1,9 +1,10 @@
 :root {
-  --first-cover: rgba(29, 106, 154, 0.72);
-  --second-cover: rgba(127, 176, 105, 0.72);
-  --third-cover: rgba(235, 197, 82, 0.72);
-  --forth-cover: rgba(230, 145, 56, 0.72);
-  --fifth-cover: rgba(29, 106, 154, 0.72);
+  --first-cover: rgba(80, 80, 80, 0.72);
+  --second-cover: rgba(29, 106, 154, 0.72);
+  --third-cover: rgba(29, 154, 125, 0.72);
+  --forth-cover: rgba(154, 125, 29, 0.72);
+  --fifth-cover: rgba(125, 29, 154, 0.72);
+  --sixth-cover: rgba(29, 106, 154, 0.72);
   --secondary: #222222;
   --footer: #222222;
   --header: #222222;
@@ -339,6 +340,10 @@ h4 {
   background: var(--fifth-cover);
 }
 
+.cover6{
+  background: var(--sixth-cover);
+}
+
 .img-title {
   color: #fff;
   cursor: pointer;
@@ -372,4 +377,6 @@ h4 {
   display: grid; 
   grid-template-columns: 1fr 1fr; 
   gap: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 }
