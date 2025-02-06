@@ -87,7 +87,7 @@ canvas {
 .logo {
   position: absolute;
   top: 30vh;
-  left: 0.5vw;
+  left: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -135,6 +135,14 @@ canvas {
   display: flex;
   flex-direction: column;
   gap: 1vh;
+}
+
+.about-img{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-bottom: 50px;
+  width: 100%; /* Make the image fill its grid cell */
+  height: auto; 
 }
 
 .skills-table {
@@ -370,12 +378,20 @@ h4 {
 }
 
 .img-modal {
-  max-width: 100%;
+  width: 100%; /* Make the image fill its grid cell */
+  height: auto;
 }
 
 .modal-grid {
   display: grid; 
   grid-template-columns: 1fr 1fr; 
+  gap: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.modal-flex {
+  display: flex;
   gap: 1vw;
   margin-top: 1vw;
   margin-bottom: 1vw;
