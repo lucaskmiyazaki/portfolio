@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { ScrollIndicator } from '../components/ScrollIndicator';
 import ProjectCard from '../components/ProjectCard';
 import SkillTag from '../components/SkillTag';
@@ -18,12 +17,18 @@ import microImage from '../../imports/micro0.gif';
 import cashierImage from '../../imports/tcc1.gif';
 
 export default function Home() {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeTag = searchParams.get('tag') ?? '';
+  const activeFilters = activeTag ? [activeTag] : [];
 
   function toggleFilter(skill: string) {
-    setActiveFilters(prev =>
-      prev.includes(skill) ? prev.filter(s => s !== skill) : [...prev, skill]
-    );
+    const next = activeTag === skill ? {} : { tag: skill };
+    setSearchParams(next);
+    if ('tag' in next) {
+      sessionStorage.setItem('lastTag', next.tag);
+    } else {
+      sessionStorage.removeItem('lastTag');
+    }
   }
 
   const skills = [

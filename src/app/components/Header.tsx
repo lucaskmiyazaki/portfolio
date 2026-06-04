@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 
+function homeHref() {
+  const tag = sessionStorage.getItem('lastTag');
+  return tag ? `/?tag=${encodeURIComponent(tag)}` : '/';
+}
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +40,7 @@ export default function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${transparent ? 'bg-transparent border-transparent' : 'bg-white/80 backdrop-blur-md border-b border-gray-100'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
-        <Link to="/" className={`text-xl transition-colors ${transparent ? 'text-white hover:text-gray-200' : 'text-gray-900 hover:text-gray-700'}`}>
+        <Link to={homeHref()} className={`text-xl transition-colors ${transparent ? 'text-white hover:text-gray-200' : 'text-gray-900 hover:text-gray-700'}`}>
           Lucas Miyazaki
         </Link>
 
@@ -49,7 +54,7 @@ export default function Header() {
               Work
             </button>
           ) : (
-            <Link to="/" className={`transition-colors ${transparent ? 'text-gray-200 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>
+            <Link to={homeHref()} className={`transition-colors ${transparent ? 'text-gray-200 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}>
               Work
             </Link>
           )}
@@ -102,7 +107,7 @@ export default function Header() {
               </button>
             ) : (
               <Link
-                to="/"
+                to={homeHref()}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
               >
