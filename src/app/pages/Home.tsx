@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router';
 import { ScrollIndicator } from '../components/ScrollIndicator';
 import ProjectCard from '../components/ProjectCard';
 import SkillTag from '../components/SkillTag';
@@ -144,7 +145,7 @@ export default function Home() {
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 pb-12 lg:pb-20">
             <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight max-w-5xl" style={{ color: 'rgb(180, 255, 255)', mixBlendMode: 'difference' }}>
-              What if health was more accessible and inclusive?
+              What if health technologies were designed around people's everyday lives?
             </h1>
           </div>
         </div>
@@ -160,12 +161,16 @@ export default function Home() {
             </h2>
 
             <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">
-              that develops wearable and everyday technologies that bring healthcare into people's daily lives.
+              that develops human-centered wearable and interactive systems to connect patients and caregivers.
             </p>
 
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-gray-500 mb-8">
               Harvard MDE '26 · USP Mechatronics / Biomedical Engineering '21
             </p>
+
+            <Link to="/about" className="text-lg text-gray-900 underline underline-offset-4 hover:text-gray-600 transition-colors">
+              More →
+            </Link>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <div className="mb-8">
           <h2 className="text-2xl text-gray-900 mb-2">Lucas Miyazaki</h2>
-          <p className="text-gray-600">Designing cyberphysical systems for care.</p>
+          <p className="text-gray-600">Designing wearable devices for care.</p>
         </div>
 
         <div className="flex flex-wrap gap-6 text-gray-600">

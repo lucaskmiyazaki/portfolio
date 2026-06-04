@@ -9,9 +9,9 @@ import tukanos4_1 from '../../imports/tukanos4-1.gif';
 import tukanos4_2 from '../../imports/tukanos4-2.gif';
 
 type Section =
-  | { text: string; kind: 'image'; media: string }
-  | { text: string; kind: 'video'; media: string }
-  | { text: string; kind: 'two-images'; media: [string, string] };
+  | { text: string; kind: 'image'; media: string; small?: boolean }
+  | { text: string; kind: 'video'; media: string; small?: boolean }
+  | { text: string; kind: 'two-images'; media: [string, string]; small?: boolean };
 
 const sections: Section[] = [
   {
@@ -33,6 +33,7 @@ const sections: Section[] = [
     text: 'We developed an app where tourists can interact with Tukano legends and see how climate change affects these stories.',
     kind: 'two-images',
     media: [tukanos4_1, tukanos4_2],
+    small: true,
   },
 ];
 
@@ -127,7 +128,7 @@ export default function Tukanos() {
                 src={current.media}
               />
             ) : current.kind === 'two-images' ? (
-              <div className="flex w-full h-full gap-4 p-12">
+              <div className={`flex w-full h-full gap-4 ${current.small ? 'p-12' : 'p-12'}`} style={current.small ? { width: '60%', height: '60%', margin: 'auto' } : {}}>
                 {current.media.map((src, i) => (
                   <img key={i} src={src} alt="" className="flex-1 h-full object-contain" />
                 ))}

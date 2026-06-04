@@ -14,16 +14,18 @@ import ally9 from '../../imports/ally9.mp4';
 import ally10 from '../../imports/ally10.jpg';
 import ally11 from '../../imports/ally11.gif';
 
-type MediaItem = { kind: 'image'; src: string } | { kind: 'video'; src: string };
+type MediaItem = { kind: 'image'; src: string; clipPath?: string } | { kind: 'video'; src: string };
 interface Section { text: string; media: MediaItem[] }
 
-const sections: Section[] = [
-  { text: 'Kids with severe allergies suffer so much that they are often willing to visit the doctor twice a week to receive allergy shots.', media: [{ kind: 'image', src: ally1 }] },
-  { text: 'Besides being painful, these visits also require parents to leave work early and reorganize their schedules.', media: [{ kind: 'image', src: ally2 }] },
-  { text: 'We wanted to create a wearable device that could deliver allergens at home, in a safe and controlled feedback loop.', media: [{ kind: 'image', src: ally3 }] },
+const sectionsA: Section[] = [
+  { text: 'Kids with severe allergies suffer so much that they are often willing to visit the doctor twice a week to receive allergy shots. Parents have to leave work early and reorganize their schedules.', media: [{ kind: 'image', src: ally1 }] },
+  { text: 'We wanted to create a wearable device that could deliver allergens at home, in a safe and controlled feedback loop.', media: [{ kind: 'image', src: ally2 }] },
+];
+
+const sectionsB: Section[] = [
   { text: 'For this to work, the patch had to be small like a drop, soft to the touch, and safe within sight.', media: [{ kind: 'image', src: ally4 }] },
   { text: 'Small like a drop: we developed a patented miniaturized mechanism that integrates a microfluidic circuit with interstitial fluid access, allowing the device to inject allergens and capture fluids through electronic control.', media: [{ kind: 'image', src: ally5 }] },
-  { text: 'Soft to the touch: the system uses a hollow microneedle that is small enough to be nearly painless, while still effectively delivering allergens in an electronically controlled way.', media: [{ kind: 'image', src: ally6 }] },
+  { text: 'Soft to the touch: the system uses a hollow microneedle that is small enough to be nearly painless, while still effectively delivering allergens in an electronically controlled way.', media: [{ kind: 'image', src: ally6, clipPath: 'inset(160px 30px 50px 30px)' }] },
   { text: "Safe within sight: the system monitors IgE and inflammation. Since every body responds differently to treatment, AllyCloud challenges rigid protocols by potentially tailoring allergen delivery based on each patient's previous response.", media: [{ kind: 'image', src: ally7 }] },
   { text: 'An app allows patients, parents, and doctors to monitor treatment progress based on how the child\'s body is responding.', media: [{ kind: 'image', src: ally8 }] },
   { text: 'The refillable patch was fabricated using PDMS and polyimide.', media: [{ kind: 'video', src: ally9 }] },
@@ -41,7 +43,7 @@ function RightPanel({ section, visible }: { section: Section; visible: boolean }
       {item.kind === 'video' ? (
         <video key={item.src} autoPlay loop muted playsInline className="w-full h-full object-contain" src={item.src} />
       ) : (
-        <img key={item.src} src={item.src} alt="" className="w-full h-full object-contain" />
+        <img key={item.src} src={item.src} alt="" className="w-full h-full object-contain" style={item.clipPath ? { clipPath: item.clipPath } : undefined} />
       )}
     </div>
   );
@@ -49,22 +51,38 @@ function RightPanel({ section, visible }: { section: Section; visible: boolean }
 
 export default function AllyCloud() {
   const navigate = useNavigate();
-  const [displayIndex, setDisplayIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const activeIndexRef = useRef(0);
+  const [displayIndexA, setDisplayIndexA] = useState(0);
+  const [visibleA, setVisibleA] = useState(true);
+  const [displayIndexB, setDisplayIndexB] = useState(0);
+  const [visibleB, setVisibleB] = useState(true);
+  const sectionRefsA = useRef<(HTMLDivElement | null)[]>([]);
+  const activeIndexRefA = useRef(0);
+  const sectionRefsB = useRef<(HTMLDivElement | null)[]>([]);
+  const activeIndexRefB = useRef(0);
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
-    sectionRefs.current.forEach((el, i) => {
+    sectionRefsA.current.forEach((el, i) => {
       if (!el) return;
       const obs = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && i !== activeIndexRef.current) {
-          activeIndexRef.current = i;
-          setVisible(false);
-          setTimeout(() => { setDisplayIndex(i); setVisible(true); }, 250);
+        if (entry.isIntersecting && i !== activeIndexRefA.current) {
+          activeIndexRefA.current = i;
+          setVisibleA(false);
+          setTimeout(() => { setDisplayIndexA(i); setVisibleA(true); }, 250);
+        }
+      }, { threshold: 0.3 });
+      obs.observe(el);
+      observers.push(obs);
+    });
+    sectionRefsB.current.forEach((el, i) => {
+      if (!el) return;
+      const obs = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting && i !== activeIndexRefB.current) {
+          activeIndexRefB.current = i;
+          setVisibleB(false);
+          setTimeout(() => { setDisplayIndexB(i); setVisibleB(true); }, 250);
         }
       }, { threshold: 0.3 });
       obs.observe(el);
@@ -73,7 +91,8 @@ export default function AllyCloud() {
     return () => observers.forEach(o => o.disconnect());
   }, []);
 
-  const current = sections[displayIndex];
+  const currentA = sectionsA[displayIndexA];
+  const currentB = sectionsB[displayIndexB];
 
   return (
     <div className="bg-white">
@@ -98,14 +117,13 @@ export default function AllyCloud() {
         <ScrollIndicator />
       </section>
 
-      {/* Scrollytelling */}
+      {/* Scrollytelling A */}
       <div className="flex relative">
-        {/* Left: scrolling text */}
         <div className="w-1/3">
-          {sections.map((section, i) => (
+          {sectionsA.map((section, i) => (
             <div
               key={i}
-              ref={el => { sectionRefs.current[i] = el; }}
+              ref={el => { sectionRefsA.current[i] = el; }}
               className="min-h-screen flex items-center px-10 lg:px-14 py-24"
             >
               <div className="max-w-xs">
@@ -117,13 +135,49 @@ export default function AllyCloud() {
             </div>
           ))}
         </div>
-
-        {/* Right: sticky panel */}
         <div
           className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
-          style={{ backgroundColor: visible ? '#f9fafb' : '#f3f4f6' }}
+          style={{ backgroundColor: visibleA ? '#f9fafb' : '#f3f4f6' }}
         >
-          <RightPanel section={current} visible={visible} />
+          <RightPanel section={currentA} visible={visibleA} />
+        </div>
+      </div>
+
+      {/* Parallax break */}
+      <div
+        className="h-[70vh] w-full"
+        style={{
+          backgroundImage: `url(${ally3})`,
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      />
+
+      {/* Scrollytelling B */}
+      <div className="flex relative">
+        <div className="w-1/3">
+          {sectionsB.map((section, i) => (
+            <div
+              key={i}
+              ref={el => { sectionRefsB.current[i] = el; }}
+              className="min-h-screen flex items-center px-10 lg:px-14 py-24"
+            >
+              <div className="max-w-xs">
+                <span className="block text-xs text-teal-500 tracking-widest uppercase mb-6">
+                  {String(sectionsA.length + i + 1).padStart(2, '0')}
+                </span>
+                <p className="text-2xl lg:text-3xl text-gray-900 leading-relaxed">{section.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div
+          className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
+          style={{ backgroundColor: visibleB ? '#f9fafb' : '#f3f4f6' }}
+        >
+          <RightPanel section={currentB} visible={visibleB} />
         </div>
       </div>
 

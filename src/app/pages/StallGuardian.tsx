@@ -9,8 +9,8 @@ import horse4 from '../../imports/horse4.png';
 import horse5 from '../../imports/horse5.mp4';
 
 type Section =
-  | { text: string; kind: 'image'; media: string }
-  | { text: string; kind: 'video'; media: string };
+  | { text: string; kind: 'image'; media: string; small?: boolean; whiteBg?: boolean }
+  | { text: string; kind: 'video'; media: string; small?: boolean; whiteBg?: boolean };
 
 const sections: Section[] = [
   {
@@ -27,24 +27,28 @@ const sections: Section[] = [
     text: 'I used computer vision to collect behavioral data, including eating, drinking, sleeping, manure, pawing, and rolling.',
     kind: 'video',
     media: horse3,
+    small: true,
   },
   {
     text: 'Through interviews, I found that barn staff often rely on intuition rather than quantitative data. They described identifying colic as "hard to describe, but you can feel when the horse is sick."',
     kind: 'image',
     media: horse4,
+    whiteBg: true,
   },
   {
     text: 'Rather than overwhelming users with technical graphs, I emphasized clear alerts and video clips of abnormal behavior, allowing quick recognition of potential problems. The app also generates technical reports that can be easily shared with veterinarians.',
     kind: 'video',
     media: horse5,
+    whiteBg: true,
   },
 ];
 
 function RightPanel({ section, visible }: { section: Section; visible: boolean }) {
+  const padding = section.small ? 'p-32' : 'p-0';
   if (section.kind === 'video') {
     return (
       <div
-        className="absolute inset-0 flex items-center justify-center transition-opacity duration-[250ms]"
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-[250ms] ${padding}`}
         style={{ opacity: visible ? 1 : 0 }}
       >
         <video
@@ -62,7 +66,7 @@ function RightPanel({ section, visible }: { section: Section; visible: boolean }
 
   return (
     <div
-      className="absolute inset-0 flex items-center justify-center transition-opacity duration-[250ms]"
+      className={`absolute inset-0 flex items-center justify-center transition-opacity duration-[250ms] ${section.small ? '' : ''}`}
       style={{ opacity: visible ? 1 : 0 }}
     >
       <img
@@ -149,7 +153,7 @@ export default function StallGuardian() {
         {/* Right: sticky panel */}
         <div
           className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
-          style={{ backgroundColor: visible ? '#f9fafb' : '#f3f4f6' }}
+          style={{ backgroundColor: current.whiteBg ? '#ffffff' : (visible ? '#f9fafb' : '#f3f4f6') }}
         >
           <RightPanel section={current} visible={visible} />
         </div>

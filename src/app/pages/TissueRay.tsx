@@ -24,28 +24,20 @@ interface Section {
   media: MediaItem[];
 }
 
-const sections: Section[] = [
+const sectionsA: Section[] = [
   {
-    text: 'People can wait years for an organ transplant. Tissue engineering studies ways to develop artificial organs and reduce this dependency.',
+    text: 'People can wait years for an organ transplant. I designed a 3D printer to fabricate artificial organs.',
     media: [{ kind: 'image', src: tissue0 }],
   },
   {
-    text: 'One of the biggest challenges is creating vascularized tissue models. Organ-on-a-chip systems use microfluidic channels to simulate human physiology.',
-    media: [
-      { kind: 'image', src: tissue2_1 },
-      { kind: 'image', src: tissue2_2 },
-      { kind: 'image', src: tissue2_3 },
-    ],
-  },
-  {
-    text: 'I researched different biofabrication strategies and focused on two promising methods: stereolithography and coagulation bath printing. Stereolithography uses a photosensitive bio-resin and a light-based 3D printer, while coagulation bath printing uses a mold filled with solidifying material and a multi-material 3D printer.',
+    text: 'I iterated on different biofabrication strategies and focused on two promising methods: stereolithography and coagulation bath printing.',
     media: [
       { kind: 'image', src: tissue3_1 },
       { kind: 'image', src: tissue3_2 },
     ],
   },
   {
-    text: 'I designed an SLA bioprinter using acrylic and 3D printed parts, while also supporting the hardware development. The light source had to cure the resin without killing the cells.',
+    text: 'I designed an SLA bioprinter using acrylic and 3D printed parts, while also supporting the electronic hardware development. The light source had to cure the resin without killing the cells.',
     media: [
       { kind: 'video', src: tissue4_1 },
       { kind: 'video', src: tissue4_2 },
@@ -60,10 +52,21 @@ const sections: Section[] = [
     ],
   },
   {
-    text: 'On the software side, I developed a CAD/CAM system that integrated with all printers from the company.',
+    text: 'On the software side, I developed a CAD/CAM system with an easy-to-use organ-on-a-chip web modeling tool and a web UI that integrated with all printers from the company.',
     media: [
       { kind: 'image', src: tissue6_1 },
       { kind: 'image', src: tissue6_2 },
+    ],
+  },
+];
+
+const sectionsB: Section[] = [
+  {
+    text: 'TissueRay was the first SLA bioprinter in the market, enabling fast-prototypying of organ-on-a-chip (microfluidic channels that simulate human physiology).',
+    media: [
+      { kind: 'image', src: tissue2_1 },
+      { kind: 'image', src: tissue2_2 },
+      { kind: 'image', src: tissue2_3 },
     ],
   },
 ];
@@ -161,22 +164,38 @@ function RightPanel({ section, visible }: { section: Section; visible: boolean }
 
 export default function TissueRay() {
   const navigate = useNavigate();
-  const [displayIndex, setDisplayIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const activeIndexRef = useRef(0);
+  const [displayIndexA, setDisplayIndexA] = useState(0);
+  const [visibleA, setVisibleA] = useState(true);
+  const [displayIndexB, setDisplayIndexB] = useState(0);
+  const [visibleB, setVisibleB] = useState(true);
+  const sectionRefsA = useRef<(HTMLDivElement | null)[]>([]);
+  const activeIndexRefA = useRef(0);
+  const sectionRefsB = useRef<(HTMLDivElement | null)[]>([]);
+  const activeIndexRefB = useRef(0);
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
-    sectionRefs.current.forEach((el, i) => {
+    sectionRefsA.current.forEach((el, i) => {
       if (!el) return;
       const obs = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && i !== activeIndexRef.current) {
-          activeIndexRef.current = i;
-          setVisible(false);
-          setTimeout(() => { setDisplayIndex(i); setVisible(true); }, 250);
+        if (entry.isIntersecting && i !== activeIndexRefA.current) {
+          activeIndexRefA.current = i;
+          setVisibleA(false);
+          setTimeout(() => { setDisplayIndexA(i); setVisibleA(true); }, 250);
+        }
+      }, { threshold: 0.3 });
+      obs.observe(el);
+      observers.push(obs);
+    });
+    sectionRefsB.current.forEach((el, i) => {
+      if (!el) return;
+      const obs = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting && i !== activeIndexRefB.current) {
+          activeIndexRefB.current = i;
+          setVisibleB(false);
+          setTimeout(() => { setDisplayIndexB(i); setVisibleB(true); }, 250);
         }
       }, { threshold: 0.3 });
       obs.observe(el);
@@ -185,7 +204,8 @@ export default function TissueRay() {
     return () => observers.forEach(o => o.disconnect());
   }, []);
 
-  const current = sections[displayIndex];
+  const currentA = sectionsA[displayIndexA];
+  const currentB = sectionsB[displayIndexB];
 
   return (
     <div className="bg-white">
@@ -210,14 +230,14 @@ export default function TissueRay() {
         <ScrollIndicator />
       </section>
 
-      {/* Scrollytelling */}
+      {/* Scrollytelling A */}
       <div className="flex relative">
         {/* Left: scrolling text */}
         <div className="w-1/3">
-          {sections.map((section, i) => (
+          {sectionsA.map((section, i) => (
             <div
               key={i}
-              ref={el => { sectionRefs.current[i] = el; }}
+              ref={el => { sectionRefsA.current[i] = el; }}
               className="min-h-screen flex items-center px-10 lg:px-14 py-24"
             >
               <div className="max-w-xs">
@@ -233,9 +253,50 @@ export default function TissueRay() {
         {/* Right: sticky panel */}
         <div
           className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
-          style={{ backgroundColor: visible ? '#f9fafb' : '#f3f4f6' }}
+          style={{ backgroundColor: visibleA ? '#f9fafb' : '#f3f4f6' }}
         >
-          <RightPanel section={current} visible={visible} />
+          <RightPanel section={currentA} visible={visibleA} />
+        </div>
+      </div>
+
+      {/* Parallax break */}
+      <div
+        className="h-[70vh] w-full"
+        style={{
+          backgroundImage: `url(${tissue3_2})`,
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      />
+
+      {/* Scrollytelling B */}
+      <div className="flex relative">
+        {/* Left: scrolling text */}
+        <div className="w-1/3">
+          {sectionsB.map((section, i) => (
+            <div
+              key={i}
+              ref={el => { sectionRefsB.current[i] = el; }}
+              className="min-h-screen flex items-center px-10 lg:px-14 py-24"
+            >
+              <div className="max-w-xs">
+                <span className="block text-xs text-teal-500 tracking-widest uppercase mb-6">
+                  {String(sectionsA.length + i + 1).padStart(2, '0')}
+                </span>
+                <p className="text-2xl lg:text-3xl text-gray-900 leading-relaxed">{section.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Right: sticky panel */}
+        <div
+          className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
+          style={{ backgroundColor: visibleB ? '#f9fafb' : '#f3f4f6' }}
+        >
+          <RightPanel section={currentB} visible={visibleB} />
         </div>
       </div>
 

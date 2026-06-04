@@ -9,13 +9,16 @@ import relevo5 from '../../imports/relevo5.png';
 import relevo6 from '../../imports/relevo6.gif';
 import relevo7 from '../../imports/relevo7.JPG';
 import relevo8 from '../../imports/relevo8.jpg';
+import relevo4b from '../../imports/relevo4b.gif';
 
-const sections = [
-  { text: 'Patients who undergo knee surgery may spend weeks with limited movement, often spending most of the day resting in bed.', media: relevo1, isVideo: false },
-  { text: 'This can cause swollen knees, stiffness, blood clots, and other complications.', media: relevo1, isVideo: false },
-  { text: 'Caregivers, nurses, and physiotherapists cannot provide 24/7 support, especially when patients are at home — so patients often rely on CPM machines, which are bulky and hard to use.', media: relevo3, isVideo: false },
+const sectionsA = [
+  { text: 'Patients who undergo knee surgery may spend weeks with limited movement, often spending most of the day resting in bed. This can cause blood clots that may compromise recovery.', media: relevo1, isVideo: false },
+  { text: 'Caregivers, nurses, and physiotherapists cannot provide 24/7 support, especially when patients are at home — so patients often rely on CPM machines, which are bulky, expensive and hard to use.', media: relevo3, isVideo: false },
   { text: 'We studied the biomechanics of leg exercises to develop a lighter and easier-to-use machine.', media: relevo4, isVideo: true },
-  { text: 'The result is a user-friendly and lightweight soft robotic system.', media: relevo5, isVideo: false },
+];
+
+const sectionsB = [
+  { text: 'The result is a user-friendly and lightweight soft robotic system.', media: relevo4b, isVideo: false },
   { text: 'A triangular cushion performs macromovements to exercise the leg, while a leg brace performs micromovements to help prevent blood clots.', media: relevo6, isVideo: false },
   { text: 'The system fits in a box and can be carried anywhere.', media: relevo7, isVideo: false },
   { text: 'Flex and EMG sensors track progress and enable remote guidance from healthcare professionals.', media: relevo8, isVideo: false },
@@ -23,22 +26,38 @@ const sections = [
 
 export default function Relevo() {
   const navigate = useNavigate();
-  const [displayIndex, setDisplayIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const activeIndexRef = useRef(0);
+  const [displayIndexA, setDisplayIndexA] = useState(0);
+  const [visibleA, setVisibleA] = useState(true);
+  const [displayIndexB, setDisplayIndexB] = useState(0);
+  const [visibleB, setVisibleB] = useState(true);
+  const sectionRefsA = useRef<(HTMLDivElement | null)[]>([]);
+  const activeIndexRefA = useRef(0);
+  const sectionRefsB = useRef<(HTMLDivElement | null)[]>([]);
+  const activeIndexRefB = useRef(0);
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
-    sectionRefs.current.forEach((el, i) => {
+    sectionRefsA.current.forEach((el, i) => {
       if (!el) return;
       const obs = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && i !== activeIndexRef.current) {
-          activeIndexRef.current = i;
-          setVisible(false);
-          setTimeout(() => { setDisplayIndex(i); setVisible(true); }, 250);
+        if (entry.isIntersecting && i !== activeIndexRefA.current) {
+          activeIndexRefA.current = i;
+          setVisibleA(false);
+          setTimeout(() => { setDisplayIndexA(i); setVisibleA(true); }, 250);
+        }
+      }, { threshold: 0.3 });
+      obs.observe(el);
+      observers.push(obs);
+    });
+    sectionRefsB.current.forEach((el, i) => {
+      if (!el) return;
+      const obs = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting && i !== activeIndexRefB.current) {
+          activeIndexRefB.current = i;
+          setVisibleB(false);
+          setTimeout(() => { setDisplayIndexB(i); setVisibleB(true); }, 250);
         }
       }, { threshold: 0.3 });
       obs.observe(el);
@@ -47,7 +66,8 @@ export default function Relevo() {
     return () => observers.forEach(o => o.disconnect());
   }, []);
 
-  const current = sections[displayIndex];
+  const currentA = sectionsA[displayIndexA];
+  const currentB = sectionsB[displayIndexB];
 
   return (
     <div className="bg-white">
@@ -72,11 +92,11 @@ export default function Relevo() {
         <ScrollIndicator />
       </section>
 
-      {/* Scrollytelling */}
+      {/* Scrollytelling A */}
       <div className="flex relative">
         <div className="w-1/3">
-          {sections.map((section, i) => (
-            <div key={i} ref={el => { sectionRefs.current[i] = el; }} className="min-h-screen flex items-center px-12 lg:px-20 py-24">
+          {sectionsA.map((section, i) => (
+            <div key={i} ref={el => { sectionRefsA.current[i] = el; }} className="min-h-screen flex items-center px-12 lg:px-20 py-24">
               <div className="max-w-sm">
                 <span className="block text-xs text-teal-500 tracking-widest uppercase mb-6">{String(i + 1).padStart(2, '0')}</span>
                 <p className="text-2xl lg:text-3xl text-gray-900 leading-relaxed">{section.text}</p>
@@ -86,18 +106,61 @@ export default function Relevo() {
         </div>
         <div
           className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
-          style={{ backgroundColor: visible ? '#f9fafb' : '#f3f4f6' }}
+          style={{ backgroundColor: visibleA ? '#f9fafb' : '#f3f4f6' }}
         >
           <div
             className="absolute inset-0 flex items-center justify-center transition-opacity duration-250"
-            style={{ opacity: visible ? 1 : 0 }}
+            style={{ opacity: visibleA ? 1 : 0 }}
           >
-            {current.isVideo ? (
+            {currentA.isVideo ? (
               <div className="absolute inset-0 bg-transparent flex items-center justify-center">
-                <video key={`v-${displayIndex}`} autoPlay loop muted playsInline className="w-full h-full object-contain" src={current.media} />
+                <video key={`v-${displayIndexA}`} autoPlay loop muted playsInline className="w-full h-full object-contain" src={currentA.media} />
               </div>
             ) : (
-              <img key={`i-${displayIndex}`} src={current.media} alt="" className="w-full h-full object-contain p-16" />
+              <img key={`i-${displayIndexA}`} src={currentA.media} alt="" className="w-full h-full object-contain p-16" />
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Parallax break */}
+      <div
+        className="h-[70vh] w-full"
+        style={{
+          backgroundImage: `url(${relevo5})`,
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      />
+
+      {/* Scrollytelling B */}
+      <div className="flex relative">
+        <div className="w-1/3">
+          {sectionsB.map((section, i) => (
+            <div key={i} ref={el => { sectionRefsB.current[i] = el; }} className="min-h-screen flex items-center px-12 lg:px-20 py-24">
+              <div className="max-w-sm">
+                <span className="block text-xs text-teal-500 tracking-widest uppercase mb-6">{String(sectionsA.length + i + 1).padStart(2, '0')}</span>
+                <p className="text-2xl lg:text-3xl text-gray-900 leading-relaxed">{section.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div
+          className="w-2/3 sticky top-0 h-screen overflow-hidden transition-colors duration-300"
+          style={{ backgroundColor: visibleB ? '#f9fafb' : '#f3f4f6' }}
+        >
+          <div
+            className="absolute inset-0 flex items-center justify-center transition-opacity duration-250"
+            style={{ opacity: visibleB ? 1 : 0 }}
+          >
+            {currentB.isVideo ? (
+              <div className="absolute inset-0 bg-transparent flex items-center justify-center">
+                <video key={`v-${displayIndexB}`} autoPlay loop muted playsInline className="w-full h-full object-contain" src={currentB.media} />
+              </div>
+            ) : (
+              <img key={`i-${displayIndexB}`} src={currentB.media} alt="" className="w-full h-full object-contain p-16" />
             )}
           </div>
         </div>
