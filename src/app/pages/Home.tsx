@@ -151,7 +151,7 @@ export default function Home() {
         <div className="absolute inset-0 flex items-end">
           <div className="max-w-7xl mx-auto w-full px-6 lg:px-12 pb-12 lg:pb-20">
             <h1 className="text-4xl md:text-5xl lg:text-7xl leading-tight max-w-5xl" style={{ color: 'rgb(180, 255, 255)', mixBlendMode: 'difference' }}>
-              What if health technologies were designed around people's everyday lives?
+              Health and Wellness Tech for Everyday Life
             </h1>
           </div>
         </div>

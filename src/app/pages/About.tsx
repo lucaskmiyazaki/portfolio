@@ -10,14 +10,6 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
-              <img
-                src={profileImage}
-                alt="Lucas Miyazaki"
-                className="w-full rounded-3xl shadow-sm"
-              />
-            </div>
-
-            <div>
               <h2 className="text-3xl lg:text-5xl text-gray-900 mb-8">
                 Designing wearable devices for care.
               </h2>
@@ -37,8 +29,21 @@ export default function About() {
                 <p>
                   In 2025, my startup AllyCloud was selected as one of the top 100 projects for Prototypes for Humanity, a global program organized by the Government of Dubai.
                 </p>
+              </div>
+            </div>
+
+            <div>
+              <img
+                src={profileImage}
+                alt="Lucas Miyazaki"
+                className="w-full rounded-3xl shadow-sm mb-8"
+              />
+              <h2 className="text-2xl lg:text-3xl text-gray-900 mb-4">
+                My passion for community engagement and positive impact.
+              </h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Outside of my work, I love engaging in social projects, especially through teaching and mentoring. I also enjoy drinking tea, cooking, bouldering, and exploring new countries.
+                  Outside of my work, I have founded and participated in social impact projects across Brazil, Colombia, and the United States, where I taught engineering, mentored students and young professionals, and supported older adults through coordination and cognitive development activities.
                 </p>
               </div>
             </div>
