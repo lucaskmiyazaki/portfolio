@@ -2,6 +2,7 @@ import { Link, useSearchParams } from 'react-router';
 import { ScrollIndicator } from '../components/ScrollIndicator';
 import ProjectCard from '../components/ProjectCard';
 import SkillTag from '../components/SkillTag';
+import { projectTags } from '../projectTags';
 import heroVideo from '../../imports/hero_main.mp4';
 
 import relevoImage from '../../imports/061-relevo.gif';
@@ -22,12 +23,12 @@ export default function Home() {
   const activeFilters = activeTag ? [activeTag] : [];
 
   function toggleFilter(skill: string) {
-    const next = activeTag === skill ? {} : { tag: skill };
-    setSearchParams(next);
-    if ('tag' in next) {
-      sessionStorage.setItem('lastTag', next.tag);
-    } else {
+    if (activeTag === skill) {
+      setSearchParams({});
       sessionStorage.removeItem('lastTag');
+    } else {
+      setSearchParams({ tag: skill });
+      sessionStorage.setItem('lastTag', skill);
     }
   }
 
@@ -48,7 +49,7 @@ export default function Home() {
     {
       title: 'Noonchi',
       description: 'A wearable remote speech-therapy support system that helps autistic professionals reflect on tone and communication during workplace meetings.',
-      tags: ['User Research', 'Interaction Design', 'AI/Computer Vision', 'Healthtech'],
+      tags: projectTags.noonchi,
       imageUrl: noonchiImage,
       isVideo: false,
       href: '/noonchi'
@@ -56,7 +57,7 @@ export default function Home() {
     {
       title: 'AllyCloud',
       description: 'A pediatric smart wearable for allergy immunotherapy at home.',
-      tags: ['Healthtech', 'Embedded Systems', 'User Research', 'Interaction Design', 'Mechanical Design'],
+      tags: projectTags.allycloud,
       imageUrl: allyCloudImage,
       isVideo: false,
       href: '/allycloud'
@@ -64,7 +65,7 @@ export default function Home() {
     {
       title: 'Relevo',
       description: 'A soft robot for tele-physiotherapy.',
-      tags: ['Embedded Systems', 'Healthtech', 'Mechanical Design', 'User Research'],
+      tags: projectTags.relevo,
       imageUrl: relevoImage,
       isVideo: false,
       href: '/relevo'
@@ -72,7 +73,7 @@ export default function Home() {
     {
       title: 'TissueRay',
       description: 'A low-cost bioprinter for fabricating organ-on-a-chip.',
-      tags: ['Digital Fabrication', 'Mechanical Design', 'Embedded Systems', 'Biomaterials', 'Healthtech'],
+      tags: projectTags.tissueray,
       imageUrl: tissueRayImage,
       isVideo: false,
       href: '/tissueray'
@@ -80,7 +81,7 @@ export default function Home() {
     {
       title: 'Tukanos',
       description: 'An AR museum that preserves Indigenous memories of water while exploring the connection between ecological, cultural, and spiritual health.',
-      tags: ['Spatial Computing', 'Interaction Design', 'User Research', 'More-than-human Design'],
+      tags: projectTags.tukanos,
       imageUrl: tukanosImage,
       isVideo: false,
       href: '/tukanos'
@@ -88,7 +89,7 @@ export default function Home() {
     {
       title: 'StallGuardian',
       description: 'An embedded IoT system for real-time livestock health monitoring.',
-      tags: ['Embedded Systems', 'AI/Computer Vision', 'Interaction Design', 'More-than-human Design'],
+      tags: projectTags.stallguardian,
       imageUrl: stallGuardianImage,
       isVideo: false,
       href: '/stallguardian'
@@ -96,7 +97,7 @@ export default function Home() {
     {
       title: 'Aroma Atlas',
       description: 'A multisensory navigation experience using scent as a spatial interface.',
-      tags: ['Spatial Computing', 'Mechanical Design', 'Embedded Systems'],
+      tags: projectTags['aroma-atlas'],
       imageUrl: aromaImage,
       isVideo: false,
       href: '/aroma-atlas'
@@ -104,7 +105,7 @@ export default function Home() {
     {
       title: 'DINO',
       description: 'A living digital display powered by bioluminescent dinoflagellates.',
-      tags: ['Spatial Computing', 'Biomaterials', 'Mechanical Design', 'Embedded Systems'],
+      tags: projectTags.dino,
       imageUrl: dinoImage,
       isVideo: false,
       href: '/dino'
@@ -112,7 +113,7 @@ export default function Home() {
     {
       title: 'Microvoxels',
       description: 'A self-assembling micro-robot built from electrostatically controlled voxel cubes.',
-      tags: ['Digital Fabrication', 'Mechanical Design', 'Embedded Systems', 'Spatial Computing'],
+      tags: projectTags.microvoxels,
       imageUrl: microImage,
       isVideo: false,
       href: '/microvoxels'
@@ -120,7 +121,7 @@ export default function Home() {
     {
       title: 'AI Cashier',
       description: 'A computer vision system for automated retail checkout without friction.',
-      tags: ['AI/Computer Vision', 'Embedded Systems'],
+      tags: projectTags['ai-cashier'],
       imageUrl: cashierImage,
       isVideo: false,
       href: 'https://ieeexplore.ieee.org/document/9529909'
@@ -128,7 +129,7 @@ export default function Home() {
     {
       title: 'Teeth Scanning',
       description: '3D scanning and computational modeling of dental structures.',
-      tags: ['AI/Computer Vision', 'Healthtech', 'Digital Fabrication'],
+      tags: projectTags['teeth-scanning'],
       imageUrl: teethImage,
       isVideo: false,
       href: 'https://www.researchgate.net/publication/347289425_Teeth_Mesh_Segmentation_Through_Curvature_Analysis'

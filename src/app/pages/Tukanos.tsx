@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ScrollIndicator } from '../components/ScrollIndicator';
 import { useNavigate } from 'react-router';
+import { projectTags, heroTags } from '../projectTags';
 import tukanos0 from '../../imports/tukanos_hero.png';
 import tukanos1 from '../../imports/tukanos1.mp4';
 import tukanos2 from '../../imports/tukanos2.gif';
@@ -73,7 +74,7 @@ export default function Tukanos() {
           <img src={tukanos0} alt="Tukanos AR Museum" className="absolute inset-0 w-full h-full object-cover opacity-95" />
         </div>
         <div className="w-1/3 h-full flex flex-col justify-center px-10 lg:px-14">
-          <p className="text-teal-400 text-sm tracking-widest uppercase mb-6">XR · UI/UX · User Research</p>
+          <p className="text-teal-400 text-sm tracking-widest uppercase mb-6">{heroTags('tukanos')}</p>
           <h1 className="text-6xl lg:text-7xl text-white mb-6 leading-none">Tukanos</h1>
           <p className="text-lg text-gray-400 max-w-xs leading-relaxed">
             An AR museum that preserves Indigenous memories of water while exploring the connection between ecological, cultural, and spiritual health.
@@ -150,8 +151,8 @@ export default function Tukanos() {
         <p className="text-gray-500 text-sm tracking-widest uppercase mb-6">Project</p>
         <h2 className="text-5xl lg:text-7xl text-white mb-10">Tukanos</h2>
         <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {['XR', 'UI/UX', 'User Research'].map(tag => (
-            <span key={tag} className="px-5 py-2 text-sm text-gray-400 border border-gray-700 rounded-full">{tag}</span>
+          {projectTags.tukanos.map(tag => (
+            <button key={tag} onClick={() => { sessionStorage.setItem('lastTag', tag); navigate(`/?tag=${encodeURIComponent(tag)}`); }} className="px-5 py-2 text-sm text-gray-400 border border-gray-700 rounded-full hover:border-teal-500 hover:text-teal-400 transition-colors">{tag}</button>
           ))}
         </div>
         <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 px-8 py-4 border border-gray-600 text-gray-300 rounded-full hover:border-teal-500 hover:text-teal-400 transition-colors">

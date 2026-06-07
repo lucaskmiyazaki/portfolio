@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ScrollIndicator } from '../components/ScrollIndicator';
 import { useNavigate } from 'react-router';
+import { projectTags, heroTags } from '../projectTags';
 import noonchi0 from '../../imports/noonchi0.png';
 import noonchi3 from '../../imports/noonchi3.mp4';
 import noonchi4 from '../../imports/noonchi4.png';
@@ -152,7 +153,7 @@ export default function Noonchi() {
         {/* Title right */}
         <div className="w-1/3 h-full flex flex-col justify-center px-16 lg:px-20">
           <p className="text-teal-400 text-sm tracking-widest uppercase mb-6">
-            User Research · AI / Computer Vision
+            {heroTags('noonchi')}
           </p>
           <h1 className="text-6xl lg:text-8xl text-white mb-6 leading-none">
             Noonchi
@@ -217,10 +218,10 @@ export default function Noonchi() {
         <p className="text-gray-500 text-sm tracking-widest uppercase mb-6">Project</p>
         <h2 className="text-5xl lg:text-7xl text-white mb-10">Noonchi</h2>
         <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {['User Research', 'UI/UX', 'AI / Computer Vision', 'Wearables'].map(tag => (
-            <span key={tag} className="px-5 py-2 text-sm text-gray-400 border border-gray-700 rounded-full">
+          {projectTags.noonchi.map(tag => (
+            <button key={tag} onClick={() => { sessionStorage.setItem('lastTag', tag); navigate(`/?tag=${encodeURIComponent(tag)}`); }} className="px-5 py-2 text-sm text-gray-400 border border-gray-700 rounded-full hover:border-teal-500 hover:text-teal-400 transition-colors">
               {tag}
-            </span>
+            </button>
           ))}
         </div>
         <button

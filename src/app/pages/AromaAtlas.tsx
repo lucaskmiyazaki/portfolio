@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ScrollIndicator } from '../components/ScrollIndicator';
 import { useNavigate } from 'react-router';
+import { projectTags, heroTags } from '../projectTags';
 import aroma4_1 from '../../imports/aroma4-1.jpg';
 import aroma1 from '../../imports/aroma1.gif';
 import aroma2 from '../../imports/aroma2.JPG';
@@ -147,7 +148,7 @@ export default function AromaAtlas() {
           <img src={aroma4_1} alt="Aroma Atlas" className="absolute inset-0 w-full h-full object-cover opacity-95" />
         </div>
         <div className="w-1/3 h-full flex flex-col justify-center px-10 lg:px-14">
-          <p className="text-amber-400 text-sm tracking-widest uppercase mb-6">UI/UX · User Research · XR</p>
+          <p className="text-amber-400 text-sm tracking-widest uppercase mb-6">{heroTags('aroma-atlas')}</p>
           <h1 className="text-6xl lg:text-7xl text-white mb-6 leading-none">Aroma Atlas</h1>
           <p className="text-lg text-gray-400 max-w-xs leading-relaxed">
             A multisensory navigation experience using scent as a spatial interface.
@@ -208,8 +209,8 @@ export default function AromaAtlas() {
         <p className="text-gray-500 text-sm tracking-widest uppercase mb-6">Project</p>
         <h2 className="text-5xl lg:text-7xl text-white mb-10">Aroma Atlas</h2>
         <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {['UI/UX', 'User Research', 'XR', 'Sensory Design'].map(tag => (
-            <span key={tag} className="px-5 py-2 text-sm text-gray-400 border border-gray-700 rounded-full">{tag}</span>
+          {projectTags['aroma-atlas'].map(tag => (
+            <button key={tag} onClick={() => { sessionStorage.setItem('lastTag', tag); navigate(`/?tag=${encodeURIComponent(tag)}`); }} className="px-5 py-2 text-sm text-gray-400 border border-gray-700 rounded-full hover:border-amber-500 hover:text-amber-400 transition-colors">{tag}</button>
           ))}
         </div>
         <button onClick={() => navigate('/')} className="inline-flex items-center gap-2 px-8 py-4 border border-gray-600 text-gray-300 rounded-full hover:border-amber-500 hover:text-amber-400 transition-colors">
