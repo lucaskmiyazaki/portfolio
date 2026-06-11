@@ -4,6 +4,9 @@ import ProjectCard from '../components/ProjectCard';
 import SkillTag from '../components/SkillTag';
 import { projectTags } from '../projectTags';
 import heroVideo from '../../imports/hero_main.mp4';
+import harvardLogo from '../../imports/harvard.svg';
+import utokyoLogo from '../../imports/utokyo.svg';
+import uspLogo from '../../imports/usp.png';
 
 import relevoImage from '../../imports/061-relevo.gif';
 import allyCloudImage from '../../imports/095-ally.jpg';
@@ -171,12 +174,27 @@ export default function Home() {
             </p>
 
             <p className="text-lg text-gray-500 mb-8">
-              Harvard MDE '26 · USP Mechatronics / Biomedical Engineering '21
+              Harvard MDE '26 <br />
+              The University of Tokyo - Research Internship '19 <br />
+              USP Mechatronics / Biomedical Engineering '21
             </p>
+          </div>
 
-            <Link to="/about" className="text-lg text-gray-900 underline underline-offset-4 hover:text-gray-600 transition-colors">
-              More →
-            </Link>
+          <div className="flex items-center justify-between gap-8">
+            <div className="flex items-center gap-8">
+              <Link to="/about" className="text-lg text-gray-900 underline underline-offset-4 hover:text-gray-600 transition-colors">
+                More →
+              </Link>
+              <Link to="/#contact" className="text-lg text-gray-900 underline underline-offset-4 hover:text-gray-600 transition-colors">
+                Contact →
+              </Link>
+            </div>
+
+            <div className="flex items-center gap-6">
+              <img src={harvardLogo} alt="Harvard University" className="h-12 opacity-50 hover:opacity-80 transition-opacity" />
+              <img src={utokyoLogo} alt="University of Tokyo" className="h-12 opacity-50 hover:opacity-80 transition-opacity" />
+              <img src={uspLogo} alt="University of São Paulo" className="h-12 opacity-50 hover:opacity-80 transition-opacity" />
+            </div>
           </div>
         </div>
       </section>
